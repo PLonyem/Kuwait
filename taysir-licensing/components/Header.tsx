@@ -88,6 +88,7 @@ export default function Header() {
       <div className="mx-auto grid h-full max-w-7xl grid-cols-[1fr_auto] items-center gap-4 px-6 lg:grid-cols-[auto_1fr_auto] lg:px-8">
         <Link
           href="/"
+          locale={locale}
           className="group flex w-fit items-center gap-2 rounded-sm text-primary outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-4"
           aria-label={t('header.homeAriaLabel')}
         >
@@ -107,6 +108,7 @@ export default function Header() {
             <Link
               key={key}
               href={href}
+              locale={locale}
               aria-current={isActive(href) ? 'page' : undefined}
               className={`relative whitespace-nowrap rounded-sm py-2 text-[0.9rem] font-semibold outline-none transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-center after:scale-x-0 after:bg-primary after:transition-transform hover:text-primary focus-visible:text-primary focus-visible:ring-2 focus-visible:ring-secondary ${
                 isActive(href)
@@ -161,6 +163,7 @@ export default function Header() {
             <div className="flex items-center justify-between gap-4">
               <Link
                 href="/"
+                locale={locale}
                 onClick={() => setIsMenuOpen(false)}
                 className="flex items-center gap-2 text-primary"
               >
@@ -195,6 +198,7 @@ export default function Header() {
                 >
                   <Link
                     href={href}
+                    locale={locale}
                     onClick={() => setIsMenuOpen(false)}
                     aria-current={isActive(href) ? 'page' : undefined}
                     className={`block rounded-lg px-4 py-3 text-xl font-semibold outline-none transition-colors focus-visible:ring-2 focus-visible:ring-secondary ${

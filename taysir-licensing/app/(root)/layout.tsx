@@ -1,11 +1,8 @@
 import type {Metadata} from 'next';
-import {headers} from 'next/headers';
 import {Cairo, Inter} from 'next/font/google';
 import type {ReactNode} from 'react';
 
-import {defaultLocale, isLocale} from '@/i18n';
-
-import './globals.css';
+import '../globals.css';
 
 const cairo = Cairo({
   subsets: ['arabic', 'latin'],
@@ -24,22 +21,16 @@ export const metadata: Metadata = {
   description: 'Kuwait driving license concierge service'
 };
 
-export default async function RootLayout({
+export default function RootRedirectLayout({
   children
 }: Readonly<{children: ReactNode}>) {
-  const requestedLocale =
-    (await headers()).get('x-next-intl-locale') ?? defaultLocale;
-  const locale = isLocale(requestedLocale) ? requestedLocale : defaultLocale;
-  const direction = locale === 'ar' ? 'rtl' : 'ltr';
-  const localeFont = locale === 'ar' ? 'font-arabic' : 'font-english';
-
   return (
     <html
-      lang={locale}
-      dir={direction}
+      lang="ar"
+      dir="rtl"
       className={`${cairo.variable} ${inter.variable}`}
     >
-      <body className={localeFont}>{children}</body>
+      <body className="font-arabic">{children}</body>
     </html>
   );
 }

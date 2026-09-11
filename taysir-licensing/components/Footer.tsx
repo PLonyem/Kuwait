@@ -1,5 +1,5 @@
 import {Clock3, Instagram, Mail, MapPin, MessageCircle, Phone, Route} from 'lucide-react';
-import {useTranslations} from 'next-intl';
+import {useLocale, useTranslations} from 'next-intl';
 
 import {Link} from '@/navigation';
 
@@ -14,6 +14,7 @@ const quickLinks = [
 
 export default function Footer() {
   const t = useTranslations();
+  const locale = useLocale();
   const whatsappHref = `https://wa.me/${t('contact.whatsappDial')}?text=${encodeURIComponent(
     t('whatsapp.prefilledMessage')
   )}`;
@@ -24,6 +25,7 @@ export default function Footer() {
         <section aria-labelledby="footer-company-heading">
           <Link
             href="/"
+            locale={locale}
             id="footer-company-heading"
             className="inline-flex items-center gap-2 rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-4 focus-visible:ring-offset-primary"
           >
@@ -68,6 +70,7 @@ export default function Footer() {
               <li key={key}>
                 <Link
                   href={href}
+                  locale={locale}
                   className="rounded-sm text-white/80 outline-none transition-colors hover:text-secondary focus-visible:ring-2 focus-visible:ring-secondary"
                 >
                   {t(`nav.${key}`)}
