@@ -1,3 +1,13 @@
+import Comparison from '@/components/Comparison';
+import Hero from '@/components/Hero';
+import WhatWeHandle from '@/components/WhatWeHandle';
+
 export default function HomePage() {
-  return null;
+  return (
+    <>
+      <Hero />
+      <Comparison />
+      <WhatWeHandle />
+    </>
+  );
 }
