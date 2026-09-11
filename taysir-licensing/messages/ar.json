@@ -1,1 +1,57 @@
-{}
+{
+  "brand": {
+    "name": "TAYSIR LICENSING"
+  },
+  "navigation": {
+    "home": "الرئيسية",
+    "services": "خدماتنا",
+    "requirements": "المتطلبات",
+    "pricing": "الأسعار",
+    "process": "خطوات العمل",
+    "about": "من نحن",
+    "contact": "اتصل بنا",
+    "faq": "الأسئلة الشائعة"
+  },
+  "header": {
+    "primaryNavigation": "التنقل الرئيسي",
+    "mobileNavigation": "قائمة التنقل للجوال",
+    "homeAriaLabel": "الصفحة الرئيسية لتيسير للترخيص",
+    "openMenu": "فتح قائمة التنقل",
+    "closeMenu": "إغلاق قائمة التنقل",
+    "callAriaLabel": "اتصل بتيسير للترخيص على الرقم {phone}"
+  },
+  "language": {
+    "switcherLabel": "اختر اللغة",
+    "arabic": "عربي",
+    "english": "EN",
+    "arabicAriaLabel": "التبديل إلى العربية",
+    "englishAriaLabel": "التبديل إلى الإنجليزية"
+  },
+  "contact": {
+    "phone": "+965 XXXX XXXX",
+    "phoneDial": "+965XXXXXXXX",
+    "whatsapp": "+965 XXXX XXXX",
+    "whatsappDial": "965XXXXXXXX",
+    "email": "taysir.licensing@gmail.com",
+    "address": "مدينة الكويت، الكويت"
+  },
+  "footer": {
+    "tagline": "دعم واضح وموثوق في رحلتك لاستخراج رخصة القيادة في الكويت.",
+    "quickLinks": "روابط سريعة",
+    "contactHeading": "تواصل معنا",
+    "workingHours": "ساعات العمل",
+    "saturdayThursday": "السبت–الخميس",
+    "weekdayHours": "٩ ص–٦ م",
+    "friday": "الجمعة",
+    "closed": "مغلق",
+    "instagramAriaLabel": "زيارة تيسير للترخيص على إنستغرام",
+    "whatsappAriaLabel": "التواصل مع تيسير للترخيص عبر واتساب",
+    "copyright": "حقوق النشر © 2026 Taysir Licensing",
+    "rightsReserved": "جميع الحقوق محفوظة"
+  },
+  "whatsapp": {
+    "label": "أرسل واتساب",
+    "ariaLabel": "إرسال رسالة واتساب إلى تيسير للترخيص",
+    "prefilledMessage": "أريد استخراج رخصة قيادة"
+  }
+}

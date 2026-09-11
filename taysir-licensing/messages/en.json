@@ -1,1 +1,57 @@
-{}
+{
+  "brand": {
+    "name": "TAYSIR LICENSING"
+  },
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "requirements": "Requirements",
+    "pricing": "Pricing",
+    "process": "Process",
+    "about": "About",
+    "contact": "Contact",
+    "faq": "FAQ"
+  },
+  "header": {
+    "primaryNavigation": "Primary navigation",
+    "mobileNavigation": "Mobile navigation",
+    "homeAriaLabel": "Taysir Licensing home",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "callAriaLabel": "Call Taysir Licensing at {phone}"
+  },
+  "language": {
+    "switcherLabel": "Choose language",
+    "arabic": "عربي",
+    "english": "EN",
+    "arabicAriaLabel": "Switch to Arabic",
+    "englishAriaLabel": "Switch to English"
+  },
+  "contact": {
+    "phone": "+965 XXXX XXXX",
+    "phoneDial": "+965XXXXXXXX",
+    "whatsapp": "+965 XXXX XXXX",
+    "whatsappDial": "965XXXXXXXX",
+    "email": "taysir.licensing@gmail.com",
+    "address": "Kuwait City, Kuwait"
+  },
+  "footer": {
+    "tagline": "Clear, dependable support for your Kuwait driving license journey.",
+    "quickLinks": "Quick links",
+    "contactHeading": "Contact",
+    "workingHours": "Working hours",
+    "saturdayThursday": "Saturday–Thursday",
+    "weekdayHours": "9 AM–6 PM",
+    "friday": "Friday",
+    "closed": "Closed",
+    "instagramAriaLabel": "Visit Taysir Licensing on Instagram",
+    "whatsappAriaLabel": "Contact Taysir Licensing on WhatsApp",
+    "copyright": "Copyright © 2026 Taysir Licensing",
+    "rightsReserved": "All rights reserved"
+  },
+  "whatsapp": {
+    "label": "Send WhatsApp",
+    "ariaLabel": "Send Taysir Licensing a WhatsApp message",
+    "prefilledMessage": "أريد استخراج رخصة قيادة"
+  }
+}
