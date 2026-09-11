@@ -7,18 +7,28 @@ import '../globals.css';
 const cairo = Cairo({
   subsets: ['arabic', 'latin'],
   variable: '--font-cairo',
-  display: 'swap'
+  display: 'optional'
 });
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
-  display: 'swap'
+  display: 'optional'
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://taysir.com'),
   title: 'Taysir Licensing',
-  description: 'Kuwait driving license concierge service'
+  description: 'Kuwait driving license concierge service',
+  alternates: {
+    canonical: 'https://taysir.com/ar',
+    languages: {
+      ar: 'https://taysir.com/ar',
+      en: 'https://taysir.com/en',
+      'x-default': 'https://taysir.com/ar'
+    }
+  },
+  icons: {icon: '/favicon.ico', apple: '/apple-touch-icon.png'}
 };
 
 export default function RootRedirectLayout({

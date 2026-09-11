@@ -1,7 +1,7 @@
 import type {Metadata} from 'next';
 import {Cairo, Inter} from 'next/font/google';
 import {NextIntlClientProvider} from 'next-intl';
-import {setRequestLocale} from 'next-intl/server';
+import {getTranslations, setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import type {ReactNode} from 'react';
 
@@ -15,18 +15,23 @@ import '../globals.css';
 const cairo = Cairo({
   subsets: ['arabic', 'latin'],
   variable: '--font-cairo',
-  display: 'swap'
+  display: 'optional'
 });
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
-  display: 'swap'
+  display: 'optional'
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://taysir.com'),
   title: 'Taysir Licensing',
-  description: 'Kuwait driving license concierge service'
+  description: 'Kuwait driving license concierge service',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png'
+  }
 };
 
 export function generateStaticParams() {
@@ -48,6 +53,7 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
   const messages = (await import(`../../messages/${locale}.json`)).default;
+  const accessibility = await getTranslations({locale, namespace: 'accessibility'});
   const direction = locale === 'ar' ? 'rtl' : 'ltr';
   const localeFont = locale === 'ar' ? 'font-arabic' : 'font-english';
 
@@ -59,8 +65,14 @@ export default async function LocaleLayout({
     >
       <body className={localeFont}>
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <a
+            href="#main-content"
+            className="fixed start-3 top-3 z-[100] -translate-y-20 rounded-lg bg-primary px-4 py-2 font-bold text-white shadow-lg outline-none transition-transform focus:translate-y-0 focus:ring-2 focus:ring-secondary"
+          >
+            {accessibility('skipToContent')}
+          </a>
           <Header />
-          <main>{children}</main>
+          <main id="main-content" tabIndex={-1}>{children}</main>
           <Footer />
           <WhatsAppButton />
         </NextIntlClientProvider>

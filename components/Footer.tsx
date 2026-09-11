@@ -1,6 +1,7 @@
 import {Clock3, Instagram, Mail, MapPin, MessageCircle, Phone, Route} from 'lucide-react';
 import {useLocale, useTranslations} from 'next-intl';
 
+import {createWhatsAppUrl, emailAddress, phoneNumber, whatsappNumber} from '@/lib/contact';
 import {Link} from '@/navigation';
 
 const quickLinks = [
@@ -15,9 +16,7 @@ const quickLinks = [
 export default function Footer() {
   const t = useTranslations();
   const locale = useLocale();
-  const whatsappHref = `https://wa.me/${t('contact.whatsappDial')}?text=${encodeURIComponent(
-    t('whatsapp.prefilledMessage')
-  )}`;
+  const whatsappHref = createWhatsAppUrl(t('whatsapp.prefilledMessage'));
 
   return (
     <footer className="bg-primary text-white">
@@ -87,11 +86,11 @@ export default function Footer() {
           <ul className="mt-5 space-y-4 text-white/80">
             <li>
               <a
-                href={`tel:${t('contact.phoneDial')}`}
+                href={`tel:${phoneNumber}`}
                 className="flex items-start gap-3 rounded-sm outline-none transition-colors hover:text-secondary focus-visible:ring-2 focus-visible:ring-secondary"
               >
                 <Phone aria-hidden="true" className="mt-1 size-4 shrink-0" />
-                <span dir="ltr">{t('contact.phoneValue')}</span>
+                <span dir="ltr">{phoneNumber}</span>
               </a>
             </li>
             <li>
@@ -102,16 +101,16 @@ export default function Footer() {
                 className="flex items-start gap-3 rounded-sm outline-none transition-colors hover:text-secondary focus-visible:ring-2 focus-visible:ring-secondary"
               >
                 <MessageCircle aria-hidden="true" className="mt-1 size-4 shrink-0" />
-                <span dir="ltr">{t('contact.whatsappValue')}</span>
+                <span dir="ltr">+{whatsappNumber}</span>
               </a>
             </li>
             <li>
               <a
-                href={`mailto:${t('contact.emailValue')}`}
+                href={`mailto:${emailAddress}`}
                 className="flex items-start gap-3 rounded-sm outline-none transition-colors hover:text-secondary focus-visible:ring-2 focus-visible:ring-secondary"
               >
                 <Mail aria-hidden="true" className="mt-1 size-4 shrink-0" />
-                <span dir="ltr" className="break-all">{t('contact.emailValue')}</span>
+                <span dir="ltr" className="break-all">{emailAddress}</span>
               </a>
             </li>
             <li className="flex items-start gap-3">

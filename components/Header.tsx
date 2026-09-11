@@ -5,6 +5,7 @@ import {Menu, Phone, Route, X} from 'lucide-react';
 import {useLocale, useTranslations} from 'next-intl';
 import {useEffect, useRef, useState} from 'react';
 
+import {phoneNumber} from '@/lib/contact';
 import {Link, usePathname} from '@/navigation';
 
 import LanguageToggle from './LanguageToggle';
@@ -40,6 +41,7 @@ export default function Header() {
     if (!isMenuOpen) return;
 
     const previousOverflow = document.body.style.overflow;
+    const menuButton = menuButtonRef.current;
     document.body.style.overflow = 'hidden';
     closeButtonRef.current?.focus();
 
@@ -72,7 +74,7 @@ export default function Header() {
     return () => {
       document.body.style.overflow = previousOverflow;
       document.removeEventListener('keydown', handleKeyDown);
-      menuButtonRef.current?.focus();
+      menuButton?.focus();
     };
   }, [isMenuOpen]);
 
@@ -90,7 +92,6 @@ export default function Header() {
           href="/"
           locale={locale}
           className="group flex w-fit items-center gap-2 rounded-sm text-primary outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-4"
-          aria-label={t('header.homeAriaLabel')}
         >
           <span className="grid size-10 place-items-center rounded-full bg-primary text-white transition-colors group-hover:bg-secondary lg:size-11">
             <Route aria-hidden="true" className="size-5 lg:size-6" />
@@ -124,12 +125,12 @@ export default function Header() {
         <div className="hidden items-center justify-end gap-4 lg:flex">
           <LanguageToggle />
           <a
-            href={`tel:${t('contact.phoneDial')}`}
+            href={`tel:${phoneNumber}`}
             className="flex items-center gap-2 whitespace-nowrap rounded-full border border-primary/20 px-3 py-2 text-sm font-semibold text-primary outline-none transition-colors hover:bg-primary hover:text-white focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2"
-            aria-label={t('header.callAriaLabel', {phone: t('contact.phoneValue')})}
+            aria-label={t('header.callAriaLabel', {phone: phoneNumber})}
           >
             <Phone aria-hidden="true" className="size-4" />
-            <span dir="ltr">{t('contact.phoneValue')}</span>
+            <span dir="ltr">{phoneNumber}</span>
           </a>
         </div>
 
@@ -216,12 +217,12 @@ export default function Header() {
             <div className="flex flex-wrap items-center justify-between gap-4 border-t border-primary/10 pt-5">
               <LanguageToggle />
               <a
-                href={`tel:${t('contact.phoneDial')}`}
+                href={`tel:${phoneNumber}`}
                 className="flex items-center gap-2 rounded-full bg-primary px-4 py-2.5 font-semibold text-white outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2"
-                aria-label={t('header.callAriaLabel', {phone: t('contact.phoneValue')})}
+                aria-label={t('header.callAriaLabel', {phone: phoneNumber})}
               >
                 <Phone aria-hidden="true" className="size-4" />
-                <span dir="ltr">{t('contact.phoneValue')}</span>
+                <span dir="ltr">{phoneNumber}</span>
               </a>
             </div>
           </motion.div>

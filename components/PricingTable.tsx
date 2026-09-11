@@ -4,6 +4,8 @@ import {motion, useReducedMotion} from 'framer-motion';
 import {Check} from 'lucide-react';
 import {useTranslations} from 'next-intl';
 
+import {createWhatsAppUrl} from '@/lib/contact';
+
 type PricingTier = {
   name: string;
   price: string;
@@ -101,9 +103,7 @@ export default function PricingTable() {
   const reduceMotion = useReducedMotion();
   const citizenTiers = t.raw('pricing.citizenTiers') as PricingTier[];
   const expatTiers = t.raw('pricing.expatTiers') as PricingTier[];
-  const whatsappHref = `https://wa.me/965XXXXXXXX?text=${encodeURIComponent(
-    t('whatsapp.prefilledMessage')
-  )}`;
+  const whatsappHref = createWhatsAppUrl(t('whatsapp.prefilledMessage'));
   const sharedProps = {
     popularLabel: t('pricing.mostPopular'),
     ctaLabel: t('pricing.cta'),
@@ -135,7 +135,7 @@ export default function PricingTable() {
           />
         </div>
 
-        <p className="mt-10 text-center text-sm text-gray-500">{t('pricing.note')}</p>
+        <p className="mt-10 text-center text-sm text-gray-600">{t('pricing.note')}</p>
       </div>
     </section>
   );

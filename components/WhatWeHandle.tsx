@@ -4,13 +4,13 @@ import {motion, useReducedMotion} from 'framer-motion';
 import {Check} from 'lucide-react';
 import {useTranslations} from 'next-intl';
 
+import {createWhatsAppUrl} from '@/lib/contact';
+
 export default function WhatWeHandle() {
   const t = useTranslations();
   const reduceMotion = useReducedMotion();
   const items = t.raw('whatWeHandle.items') as string[];
-  const whatsappHref = `https://wa.me/965XXXXXXXX?text=${encodeURIComponent(
-    t('whatsapp.prefilledMessage')
-  )}`;
+  const whatsappHref = createWhatsAppUrl(t('whatsapp.prefilledMessage'));
 
   return (
     <section className="w-full bg-white px-6 py-16 lg:py-24">
@@ -58,8 +58,8 @@ export default function WhatWeHandle() {
             href={whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={t('whatsapp.ariaLabel')}
-            className="inline-flex rounded-full border-2 border-cta px-7 py-3 font-bold text-primary outline-none transition-colors hover:bg-cta hover:text-white focus-visible:ring-4 focus-visible:ring-primary/20 focus-visible:ring-offset-4"
+            aria-label={t('whatWeHandle.cta')}
+            className="inline-flex rounded-full border-2 border-cta px-7 py-3 font-bold text-primary outline-none transition-colors hover:bg-cta hover:text-gray-900 focus-visible:ring-4 focus-visible:ring-primary/20 focus-visible:ring-offset-4"
             whileHover={reduceMotion ? undefined : {scale: 1.04}}
             whileFocus={reduceMotion ? undefined : {scale: 1.04}}
             whileTap={reduceMotion ? undefined : {scale: 0.98}}

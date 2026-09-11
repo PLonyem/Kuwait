@@ -1,7 +1,9 @@
 'use client';
 
-import {motion} from 'framer-motion';
+import {motion, useReducedMotion} from 'framer-motion';
 import {useTranslations} from 'next-intl';
+
+import {createWhatsAppUrl} from '@/lib/contact';
 
 function WhatsAppIcon() {
   return (
@@ -18,9 +20,8 @@ function WhatsAppIcon() {
 
 export default function WhatsAppButton() {
   const t = useTranslations('whatsapp');
-  const href = `https://wa.me/965XXXXXXXX?text=${encodeURIComponent(
-    t('prefilledMessage')
-  )}`;
+  const reduceMotion = useReducedMotion();
+  const href = createWhatsAppUrl(t('prefilledMessage'));
 
   return (
     <div className="group fixed bottom-5 right-5 z-50 sm:bottom-6 sm:right-6">
@@ -35,12 +36,12 @@ export default function WhatsAppButton() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={t('ariaLabel')}
-        className="grid size-14 place-items-center rounded-full bg-cta text-white shadow-[0_8px_24px_rgba(37,211,102,0.38)] outline-none focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-cta sm:size-[60px]"
-        animate={{scale: [1, 1.05, 1]}}
-        transition={{duration: 2, repeat: Infinity, ease: 'easeInOut'}}
-        whileHover={{scale: 1.1}}
-        whileFocus={{scale: 1.1}}
-        whileTap={{scale: 0.96}}
+        className="grid size-14 will-change-transform place-items-center rounded-full bg-cta text-white shadow-[0_8px_24px_rgba(37,211,102,0.38)] outline-none focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-cta sm:size-[60px]"
+        animate={reduceMotion ? undefined : {scale: [1, 1.05, 1]}}
+        transition={reduceMotion ? undefined : {duration: 2, repeat: Infinity, ease: 'easeInOut'}}
+        whileHover={reduceMotion ? undefined : {scale: 1.1}}
+        whileFocus={reduceMotion ? undefined : {scale: 1.1}}
+        whileTap={reduceMotion ? undefined : {scale: 0.96}}
       >
         <WhatsAppIcon />
       </motion.a>

@@ -6,6 +6,30 @@
     "home": {
       "title": "Taysir — Your Kuwait Driving License Without the Headache",
       "description": "Kuwait driving license concierge service. Send one WhatsApp message and we handle everything."
+    },
+    "services": {
+      "title": "Our Services — Taysir",
+      "description": "Complete Kuwait driving license application and document-clearing services."
+    },
+    "requirements": {
+      "title": "Requirements — Taysir",
+      "description": "Review the documents and eligibility requirements for a Kuwait driving license."
+    },
+    "pricing": {
+      "title": "Pricing — Taysir",
+      "description": "Clear driving license concierge packages for Kuwaiti citizens and expatriates."
+    },
+    "process": {
+      "title": "Process — Taysir",
+      "description": "Five simple steps from your first WhatsApp message to receiving your license."
+    },
+    "about": {
+      "title": "About Us — Taysir",
+      "description": "Meet Taysir, a Kuwait-based company simplifying driving license procedures."
+    },
+    "contact": {
+      "title": "Contact Us — Taysir",
+      "description": "Contact the Taysir team by WhatsApp, phone, or email."
     }
   },
   "nav": {
@@ -283,33 +307,127 @@
   },
   "services": {
     "title": "Our Services",
+    "subtitle": "We handle everything you need to obtain your driving license",
+    "includes": "What is included",
+    "priceLabel": "Price",
+    "timelineLabel": "Timeline",
+    "cta": "Ask on WhatsApp",
     "items": [
       {
         "title": "Driving License Issuance",
-        "description": "We manage your Kuwaiti driving license application from start to finish.",
-        "price": "Starting from KWD 500",
+        "description": "We obtain your Kuwaiti driving license from scratch, handling file opening, documents, appointments, and follow-up through delivery.",
+        "includes": ["Traffic file opening", "Complete document preparation", "Theory test booking", "Road test booking", "Follow-up through delivery"],
+        "price": "From KWD 500 (citizens) / KWD 750 (expatriates)",
         "timeline": "2+ months"
       },
       {
         "title": "Government Paperwork Processing",
-        "description": "We manage the required government paperwork on your behalf.",
-        "price": "Starting from KWD 150",
+        "description": "We process the government paperwork related to your license, including attestations, salary certificates, and document submissions.",
+        "includes": ["University certificate attestation (MOFA)", "Employer salary certificate", "Certified translation", "Submission to the relevant authorities"],
+        "price": "From KWD 150 (citizens) / KWD 200 (expatriates)",
         "timeline": "1–2 weeks"
       },
       {
         "title": "Driving School Booking",
-        "description": "We arrange your booking with a suitable driving school.",
-        "price": "Starting from KWD 120",
+        "description": "We book a suitable Kuwait driving school and follow your progress until you pass the test.",
+        "includes": ["Suitable school selection", "Appointment booking", "Progress follow-up", "Support after an unsuccessful test"],
+        "price": "From KWD 120 (citizens) / KWD 180 (expatriates)",
         "timeline": "2–3 weeks"
       },
       {
         "title": "Medical Examination Assistance",
-        "description": "We coordinate the medical examination required for your application.",
-        "price": "Starting from KWD 100",
+        "description": "We accompany you or coordinate the required eye and blood tests at a nearby approved medical center.",
+        "includes": ["Examination appointment", "Medical-center coordination", "Results follow-up", "Results delivery to traffic authorities"],
+        "price": "From KWD 100 (citizens) / KWD 150 (expatriates)",
         "timeline": "1–3 days"
       }
     ]
   },
+  "requirementsPage": {
+    "title": "Requirements",
+    "subtitle": "Everything you need to obtain a driving license in Kuwait",
+    "tabsLabel": "Choose applicant category",
+    "citizens": {
+      "title": "For Kuwaiti Citizens",
+      "items": ["Original Civil ID", "Two personal photos (blue background)", "Eye examination", "Blood test", "Age 18 or older"]
+    },
+    "expatriates": {
+      "title": "For Expatriates",
+      "items": ["Original Civil ID", "Passport with valid residency", "Two personal photos (blue background)", "Eye examination", "Blood test", "Attested university certificate", "Salary certificate (minimum KWD 600)", "Employer letter", "Age 18 or older"]
+    },
+    "download": "Download Document Checklist (PDF)",
+    "cta": "Have every document? Send a WhatsApp message now"
+  },
+  "pricingPage": {
+    "title": "Pricing",
+    "subtitle": "Transparent pricing with no hidden service fees",
+    "addOnsTitle": "Add-On Services",
+    "table": {"service": "Service", "citizens": "Citizens", "expatriates": "Expatriates", "timeline": "Timeline"},
+    "addOns": [
+      {"service": "License renewal", "citizens": "KWD 150", "expatriates": "KWD 200", "timeline": "1–2 weeks"},
+      {"service": "Foreign license conversion", "citizens": "KWD 500", "expatriates": "KWD 600", "timeline": "2–3 weeks"},
+      {"service": "Road test retake", "citizens": "KWD 200", "expatriates": "KWD 250", "timeline": "1–2 weeks"},
+      {"service": "Family package (3+)", "citizens": "10% discount", "expatriates": "10% discount", "timeline": "—"},
+      {"service": "Corporate package (5+)", "citizens": "15% discount", "expatriates": "15% discount", "timeline": "—"}
+    ],
+    "governmentTitle": "Government Fees (Not Included)",
+    "governmentFees": ["File opening: KWD 1", "Eye examination: KWD 2", "Blood test: KWD 3", "Theory test: KWD 10", "Road test: KWD 10", "One-year license issuance: KWD 10", "Three-year license issuance: KWD 30", "Driving school: KWD 100–200"],
+    "governmentNote": "These fees are paid directly to the government by the client",
+    "paymentTitle": "Payment Methods",
+    "paymentMethods": ["KNET", "Bank transfer", "Cash at our office"],
+    "finalCta": "Ready to continue? Send a WhatsApp message now"
+  },
+  "processPage": {
+    "title": "Process",
+    "subtitle": "Five simple steps to receive your license",
+    "steps": [
+      {"number": "1", "title": "Send a WhatsApp Message", "description": "Tell us your license type and available documents", "duration": "Within minutes"},
+      {"number": "2", "title": "Send Your Documents", "description": "Share copies of your Civil ID and passport", "duration": "Within one hour"},
+      {"number": "3", "title": "We Open Your Traffic File", "description": "We handle file opening and the related paperwork", "duration": "1–3 days"},
+      {"number": "4", "title": "We Coordinate Your Tests", "description": "We book and support your theory and road tests", "duration": "Based on package"},
+      {"number": "5", "title": "Receive Your License", "description": "We deliver the completed license to your door", "duration": "Based on package"}
+    ],
+    "timelineTitle": "Total Timeline by Package",
+    "table": {"tier": "Package", "citizens": "Citizens", "expatriates": "Expatriates"},
+    "timelines": [
+      {"tier": "Essential Service", "citizens": "2+ months", "expatriates": "2+ months"},
+      {"tier": "Concierge Service", "citizens": "2–5 weeks", "expatriates": "2–5 weeks"},
+      {"tier": "VIP Service", "citizens": "2–5 weeks", "expatriates": "2–5 weeks"}
+    ],
+    "finalCta": "Ready to begin? Send a WhatsApp message now"
+  },
+  "aboutPage": {
+    "title": "About Us",
+    "subtitle": "A Kuwait-based company simplifying driving license procedures",
+    "storyTitle": "Our Story",
+    "story": "Taysir is a Kuwait-based company specializing in simplified driving license procedures. Since our founding, we have helped more than 500 clients obtain their licenses without the usual hassle. We believe your time is too valuable to spend navigating government offices.",
+    "missionTitle": "Our Mission",
+    "mission": "To make obtaining a driving license simple, fast, and transparent for every citizen and expatriate in Kuwait.",
+    "whyTitle": "Why Choose Us?",
+    "reasons": ["5+ years of experience", "Arabic- and English-speaking team", "Daily follow-up", "Transparent pricing", "Instant WhatsApp response"],
+    "stats": [{"value": "+500", "label": "Clients"}, {"value": "+5", "label": "Years of experience"}, {"value": "4.9", "label": "Rating"}],
+    "finalCta": "Ready to begin? Send us a WhatsApp message"
+  },
+  "contactPage": {
+    "title": "Contact Us",
+    "subtitle": "We are here to answer all your questions",
+    "fastest": "Fastest response",
+    "whatsappButton": "Send a WhatsApp Message",
+    "mapTitle": "Taysir location in Kuwait City",
+    "form": {
+      "title": "Send Us a Message",
+      "name": "Name",
+      "phone": "Phone Number",
+      "message": "Message",
+      "submit": "Send via WhatsApp",
+      "success": "Your message is ready and WhatsApp has opened for you to send it.",
+      "whatsappMessage": "New website enquiry\nName: {name}\nPhone: {phone}\nMessage: {message}"
+    }
+  },
+  "accessibility": {"skipToContent": "Skip to main content"},
+  "notFoundPage": {"title": "Page Not Found", "description": "Sorry, we could not find the page you requested.", "home": "Return Home"},
+  "errorPage": {"title": "Something Went Wrong", "description": "The page could not be loaded. Please try again.", "retry": "Try Again", "home": "Return Home"},
+  "loading": {"label": "Loading page"},
   "whatsapp": {
     "label": "Send WhatsApp",
     "ariaLabel": "Send Taysir Licensing a WhatsApp message",

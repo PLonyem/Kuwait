@@ -4,6 +4,8 @@ import {motion, useReducedMotion} from 'framer-motion';
 import {Clock, Mail, Phone} from 'lucide-react';
 import {useLocale, useTranslations} from 'next-intl';
 
+import {createWhatsAppUrl, emailAddress, phoneNumber} from '@/lib/contact';
+
 function WhatsAppIcon() {
   return (
     <svg
@@ -21,9 +23,7 @@ export default function FinalCTA() {
   const t = useTranslations();
   const locale = useLocale();
   const reduceMotion = useReducedMotion();
-  const whatsappHref = `https://wa.me/965XXXXXXXX?text=${encodeURIComponent(
-    t('whatsapp.prefilledMessage')
-  )}`;
+  const whatsappHref = createWhatsAppUrl(t('whatsapp.prefilledMessage'));
 
   return (
     <section className="relative w-full overflow-hidden bg-primary px-6 py-20 text-white lg:py-32">
@@ -46,7 +46,7 @@ export default function FinalCTA() {
           href={whatsappHref}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={t('whatsapp.ariaLabel')}
+          aria-label={t('finalCta.button')}
           className="inline-flex rounded-full bg-white px-10 py-5 text-lg font-bold text-primary shadow-xl outline-none focus-visible:ring-4 focus-visible:ring-secondary focus-visible:ring-offset-4 focus-visible:ring-offset-primary"
           whileHover={reduceMotion ? undefined : {scale: 1.05}}
           whileFocus={reduceMotion ? undefined : {scale: 1.05}}
@@ -60,18 +60,18 @@ export default function FinalCTA() {
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 text-white/80 sm:flex-row sm:flex-wrap sm:gap-x-7">
           <a
-            href={`tel:${t('contact.phoneDial')}`}
+            href={`tel:${phoneNumber}`}
             className="flex items-center gap-2 rounded-sm outline-none transition-colors hover:text-white focus-visible:ring-2 focus-visible:ring-secondary"
           >
             <Phone aria-hidden="true" className="size-4" />
-            <span dir="ltr">{t('contact.phoneValue')}</span>
+            <span dir="ltr">{phoneNumber}</span>
           </a>
           <a
-            href={`mailto:${t('contact.emailValue')}`}
+            href={`mailto:${emailAddress}`}
             className="flex items-center gap-2 rounded-sm outline-none transition-colors hover:text-white focus-visible:ring-2 focus-visible:ring-secondary"
           >
             <Mail aria-hidden="true" className="size-4" />
-            <span dir="ltr">{t('contact.emailValue')}</span>
+            <span dir="ltr">{emailAddress}</span>
           </a>
           <p className="flex items-center gap-2">
             <Clock aria-hidden="true" className="size-4" />

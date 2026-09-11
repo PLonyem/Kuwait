@@ -3,6 +3,8 @@
 import {motion, useReducedMotion} from 'framer-motion';
 import {useLocale, useTranslations} from 'next-intl';
 
+import {createWhatsAppUrl} from '@/lib/contact';
+
 function WhatsAppIcon() {
   return (
     <svg
@@ -20,9 +22,7 @@ export default function Hero() {
   const t = useTranslations();
   const locale = useLocale();
   const reduceMotion = useReducedMotion();
-  const whatsappHref = `https://wa.me/965XXXXXXXX?text=${encodeURIComponent(
-    t('whatsapp.prefilledMessage')
-  )}`;
+  const whatsappHref = createWhatsAppUrl(t('whatsapp.prefilledMessage'));
 
   return (
     <section className="relative flex min-h-[90vh] w-full items-center overflow-hidden bg-gradient-to-b from-accent/25 via-white to-white px-6 py-20 lg:py-32">
@@ -30,20 +30,10 @@ export default function Hero() {
         aria-hidden="true"
         className="absolute inset-x-0 top-0 h-72 bg-[radial-gradient(circle_at_top,rgba(27,94,32,0.12),transparent_68%)]"
       />
-      <motion.div
-        className="relative mx-auto w-full max-w-4xl text-center"
-        initial={reduceMotion ? false : {opacity: 0}}
-        animate={{opacity: 1}}
-        transition={{duration: 0.7, ease: 'easeOut'}}
-      >
-        <motion.h1
-          className="text-4xl font-bold leading-tight text-primary md:text-5xl lg:text-6xl"
-          initial={reduceMotion ? false : {opacity: 0, y: 24}}
-          animate={{opacity: 1, y: 0}}
-          transition={{duration: 0.65, ease: [0.22, 1, 0.36, 1]}}
-        >
+      <div className="hero-content-enter relative mx-auto w-full max-w-4xl text-center">
+        <h1 className="hero-heading-enter text-4xl font-bold leading-tight text-primary md:text-5xl lg:text-6xl">
           {t('hero.headline')}
-        </motion.h1>
+        </h1>
 
         <motion.p
           className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-700 md:text-xl md:leading-9"
@@ -58,8 +48,8 @@ export default function Hero() {
           href={whatsappHref}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={t('whatsapp.ariaLabel')}
-          className="mt-10 inline-flex rounded-full bg-cta px-8 py-4 text-base font-bold text-white shadow-[0_10px_30px_rgba(37,211,102,0.28)] outline-none transition-shadow hover:shadow-lg focus-visible:ring-4 focus-visible:ring-primary/25 focus-visible:ring-offset-4 md:text-lg"
+          aria-label={t('hero.ctaPrimary')}
+          className="mt-10 inline-flex rounded-full bg-cta px-8 py-4 text-base font-bold text-gray-900 shadow-[0_10px_30px_rgba(37,211,102,0.28)] outline-none transition-shadow hover:shadow-lg focus-visible:ring-4 focus-visible:ring-primary/25 focus-visible:ring-offset-4 md:text-lg"
           whileHover={reduceMotion ? undefined : {scale: 1.05}}
           whileFocus={reduceMotion ? undefined : {scale: 1.05}}
           whileTap={reduceMotion ? undefined : {scale: 0.98}}
@@ -73,7 +63,7 @@ export default function Hero() {
         <p className="mt-6 text-sm font-medium text-gray-500">
           {t('hero.trustLine')}
         </p>
-      </motion.div>
+      </div>
     </section>
   );
 }

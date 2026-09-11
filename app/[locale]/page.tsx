@@ -1,5 +1,5 @@
 import type {Metadata} from 'next';
-import {getTranslations} from 'next-intl/server';
+import {getTranslations, setRequestLocale} from 'next-intl/server';
 
 import Comparison from '@/components/Comparison';
 import FAQ from '@/components/FAQ';
@@ -10,38 +10,47 @@ import ProcessTimeline from '@/components/ProcessTimeline';
 import Testimonials from '@/components/Testimonials';
 import TrustSignals from '@/components/TrustSignals';
 import WhatWeHandle from '@/components/WhatWeHandle';
+import {emailAddress, phoneNumber} from '@/lib/contact';
+import {getPageLocale, type LocalePageProps} from '@/lib/locale';
+import {createPageMetadata, siteUrl} from '@/lib/seo';
 
-type HomePageProps = {
-  params: Promise<{locale: string}>;
-};
-
-export async function generateMetadata({params}: HomePageProps): Promise<Metadata> {
-  const {locale} = await params;
-  const t = await getTranslations({locale, namespace: 'metadata.home'});
-  const title = t('title');
-  const description = t('description');
-
-  return {
-    title,
-    description,
-    openGraph: {
-      type: 'website',
-      locale: locale === 'ar' ? 'ar_KW' : 'en_KW',
-      alternateLocale: locale === 'ar' ? ['en_KW'] : ['ar_KW'],
-      title,
-      description
-    },
-    twitter: {
-      card: 'summary',
-      title,
-      description
-    }
-  };
+export async function generateMetadata({params}: LocalePageProps): Promise<Metadata> {
+  return createPageMetadata(await getPageLocale(params), 'home');
 }
 
-export default function HomePage() {
+export default async function HomePage({params}: LocalePageProps) {
+  const locale = await getPageLocale(params);
+  setRequestLocale(locale);
+  const t = await getTranslations({locale});
+  const faqItems = t.raw('faq.items') as Array<{q: string; a: string}>;
+  const services = t.raw('services.items') as Array<{title: string; description: string}>;
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'Taysir Licensing',
+    url: `${siteUrl}/${locale}`,
+    image: `${siteUrl}/images/og-image.jpg`,
+    telephone: phoneNumber,
+    email: emailAddress,
+    address: {'@type': 'PostalAddress', addressLocality: t('contact.addressValue'), addressCountry: 'KW'},
+    openingHours: 'Sa-Th 09:00-18:00',
+    aggregateRating: {'@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '127'}
+  };
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((item) => ({'@type': 'Question', name: item.q, acceptedAnswer: {'@type': 'Answer', text: item.a}}))
+  };
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@graph': services.map((service) => ({'@type': 'Service', name: service.title, description: service.description, provider: {'@type': 'LocalBusiness', name: 'Taysir Licensing'}, areaServed: {'@type': 'Country', name: 'Kuwait'}}))
+  };
+
   return (
     <>
+      {[localBusinessSchema, faqSchema, serviceSchema].map((schema, index) => (
+        <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schema).replace(/</g, '\\u003c')}} />
+      ))}
       <Hero />
       <Comparison />
       <WhatWeHandle />
