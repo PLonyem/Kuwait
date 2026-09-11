@@ -121,36 +121,71 @@
       {
         "name": "Essential Service",
         "price": "KWD 500",
-        "timeline": "2+ months (8–12 weeks)"
+        "timeline": "2+ months (8–12 weeks)",
+        "features": [
+          "Eligibility and document review",
+          "File-opening assistance",
+          "Essential appointment coordination"
+        ]
       },
       {
         "name": "Concierge Service",
         "price": "KWD 1,150",
-        "timeline": "2–5 weeks"
+        "timeline": "2–5 weeks",
+        "features": [
+          "Everything in Essential",
+          "Complete paperwork handling",
+          "Test appointment coordination",
+          "Continuous follow-up until delivery"
+        ]
       },
       {
         "name": "VIP Service",
         "price": "KWD 2,650",
-        "timeline": "2–5 weeks (fastest)"
+        "timeline": "2–5 weeks (fastest)",
+        "features": [
+          "Everything in Concierge",
+          "Priority coordination",
+          "Fastest available appointments",
+          "Dedicated support throughout"
+        ]
       }
     ],
     "expatTiers": [
       {
         "name": "Essential Service",
         "price": "KWD 750",
-        "timeline": "2+ months (8–12 weeks)"
+        "timeline": "2+ months (8–12 weeks)",
+        "features": [
+          "Eligibility and document review",
+          "File-opening assistance",
+          "Essential appointment coordination"
+        ]
       },
       {
         "name": "Concierge Service",
         "price": "KWD 1,600",
-        "timeline": "2–5 weeks"
+        "timeline": "2–5 weeks",
+        "features": [
+          "Everything in Essential",
+          "Complete paperwork handling",
+          "Test appointment coordination",
+          "Continuous follow-up until delivery"
+        ]
       },
       {
         "name": "VIP Service",
         "price": "KWD 3,700",
-        "timeline": "2–5 weeks (fastest)"
+        "timeline": "2–5 weeks (fastest)",
+        "features": [
+          "Everything in Concierge",
+          "Priority coordination",
+          "Fastest available appointments",
+          "Dedicated support throughout"
+        ]
       }
-    ]
+    ],
+    "note": "Government fees are not included"
   },
   "testimonials": {
     "title": "Client Testimonials",
