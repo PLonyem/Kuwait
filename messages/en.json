@@ -2,6 +2,12 @@
   "brand": {
     "name": "TAYSIR LICENSING"
   },
+  "metadata": {
+    "home": {
+      "title": "Taysir — Your Kuwait Driving License Without the Headache",
+      "description": "Kuwait driving license concierge service. Send one WhatsApp message and we handle everything."
+    }
+  },
   "nav": {
     "home": "Home",
     "services": "Services",
