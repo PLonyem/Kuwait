@@ -70,7 +70,7 @@ export default function Footer() {
                   href={href}
                   className="rounded-sm text-white/80 outline-none transition-colors hover:text-secondary focus-visible:ring-2 focus-visible:ring-secondary"
                 >
-                  {t(`navigation.${key}`)}
+                  {t(`nav.${key}`)}
                 </Link>
               </li>
             ))}
@@ -79,7 +79,7 @@ export default function Footer() {
 
         <section aria-labelledby="footer-contact-heading">
           <h2 id="footer-contact-heading" className="text-lg font-bold">
-            {t('footer.contactHeading')}
+            {t('footer.contactUs')}
           </h2>
           <ul className="mt-5 space-y-4 text-white/80">
             <li>
@@ -88,7 +88,7 @@ export default function Footer() {
                 className="flex items-start gap-3 rounded-sm outline-none transition-colors hover:text-secondary focus-visible:ring-2 focus-visible:ring-secondary"
               >
                 <Phone aria-hidden="true" className="mt-1 size-4 shrink-0" />
-                <span dir="ltr">{t('contact.phone')}</span>
+                <span dir="ltr">{t('contact.phoneValue')}</span>
               </a>
             </li>
             <li>
@@ -99,21 +99,21 @@ export default function Footer() {
                 className="flex items-start gap-3 rounded-sm outline-none transition-colors hover:text-secondary focus-visible:ring-2 focus-visible:ring-secondary"
               >
                 <MessageCircle aria-hidden="true" className="mt-1 size-4 shrink-0" />
-                <span dir="ltr">{t('contact.whatsapp')}</span>
+                <span dir="ltr">{t('contact.whatsappValue')}</span>
               </a>
             </li>
             <li>
               <a
-                href={`mailto:${t('contact.email')}`}
+                href={`mailto:${t('contact.emailValue')}`}
                 className="flex items-start gap-3 rounded-sm outline-none transition-colors hover:text-secondary focus-visible:ring-2 focus-visible:ring-secondary"
               >
                 <Mail aria-hidden="true" className="mt-1 size-4 shrink-0" />
-                <span dir="ltr" className="break-all">{t('contact.email')}</span>
+                <span dir="ltr" className="break-all">{t('contact.emailValue')}</span>
               </a>
             </li>
             <li className="flex items-start gap-3">
               <MapPin aria-hidden="true" className="mt-1 size-4 shrink-0" />
-              <span>{t('contact.address')}</span>
+              <span>{t('contact.addressValue')}</span>
             </li>
           </ul>
         </section>

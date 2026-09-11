@@ -2,7 +2,7 @@
   "brand": {
     "name": "TAYSIR LICENSING"
   },
-  "navigation": {
+  "nav": {
     "home": "Home",
     "services": "Services",
     "requirements": "Requirements",
@@ -27,27 +27,246 @@
     "arabicAriaLabel": "Switch to Arabic",
     "englishAriaLabel": "Switch to English"
   },
+  "hero": {
+    "headline": "Your Kuwait Driving License — Without the Headache",
+    "subheadline": "Send us one WhatsApp message. We handle everything — from opening your file to receiving your license.",
+    "ctaPrimary": "Send a WhatsApp Message — Instant Reply",
+    "trustLine": "+500 clients obtained their licenses with us"
+  },
+  "comparison": {
+    "title": "The Traditional Way vs. Our Way",
+    "oldWay": {
+      "title": "The Traditional Way",
+      "items": [
+        "10+ visits to government offices",
+        "2–5 months of waiting",
+        "Arabic-only paperwork",
+        "Exhausting daily follow-up",
+        "Complicated appointment booking",
+        "Risk of rejection and resubmission",
+        "Lost working days"
+      ]
+    },
+    "ourWay": {
+      "title": "Our Way",
+      "items": [
+        "One WhatsApp message",
+        "The fastest possible turnaround",
+        "We handle all paperwork",
+        "We follow up on your behalf",
+        "We arrange your appointments",
+        "Experience that reduces errors and delays",
+        "You stay where you are; we do the legwork"
+      ]
+    }
+  },
+  "whatWeHandle": {
+    "title": "What Do We Handle for You?",
+    "items": [
+      "Opening your traffic department file",
+      "Obtaining your salary certificate from your employer",
+      "Attesting your university certificate",
+      "Coordinating the required medical examination (eye and blood tests)",
+      "Booking a driving school",
+      "Booking the theory test",
+      "Booking the road test",
+      "Paying government fees",
+      "Following up until license delivery",
+      "Support in Arabic and English"
+    ]
+  },
+  "howItWorks": {
+    "title": "How Does the Service Work?",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Send a WhatsApp Message",
+        "description": "Tell us which type of license you need"
+      },
+      {
+        "number": "2",
+        "title": "Send Your Documents",
+        "description": "Send copies of your Civil ID and passport"
+      },
+      {
+        "number": "3",
+        "title": "Receive Your License",
+        "description": "We manage every step until your license is delivered"
+      }
+    ]
+  },
+  "trust": {
+    "reviews": "4.9 (127 reviews)",
+    "clients": "+500 satisfied clients",
+    "experience": "+5 years of experience",
+    "office": "Kuwait-based office",
+    "support": "Arabic and English support",
+    "reply": "Instant WhatsApp response"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "citizens": "For Kuwaiti Citizens",
+    "expatriates": "For Expatriates",
+    "tiers": {
+      "essential": "Essential Service",
+      "concierge": "Concierge Service",
+      "vip": "VIP Service"
+    },
+    "mostPopular": "Most Popular",
+    "timeline": "Timeline",
+    "price": "Price",
+    "cta": "Get an Accurate Quote",
+    "citizenTiers": [
+      {
+        "name": "Essential Service",
+        "price": "KWD 500",
+        "timeline": "2+ months (8–12 weeks)"
+      },
+      {
+        "name": "Concierge Service",
+        "price": "KWD 1,150",
+        "timeline": "2–5 weeks"
+      },
+      {
+        "name": "VIP Service",
+        "price": "KWD 2,650",
+        "timeline": "2–5 weeks (fastest)"
+      }
+    ],
+    "expatTiers": [
+      {
+        "name": "Essential Service",
+        "price": "KWD 750",
+        "timeline": "2+ months (8–12 weeks)"
+      },
+      {
+        "name": "Concierge Service",
+        "price": "KWD 1,600",
+        "timeline": "2–5 weeks"
+      },
+      {
+        "name": "VIP Service",
+        "price": "KWD 3,700",
+        "timeline": "2–5 weeks (fastest)"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Client Testimonials",
+    "items": [
+      {
+        "quote": "I had struggled with the paperwork for three months. Within two weeks of working with the Taysir team, I received my license. Excellent service.",
+        "name": "Ahmed M.",
+        "role": "Engineer"
+      },
+      {
+        "quote": "It was the best decision I made. They saved me months of appointments and repeated visits. I highly recommend their service.",
+        "name": "Fatima A.",
+        "role": "Teacher"
+      },
+      {
+        "quote": "A professional team, precise follow-up, and quick WhatsApp responses. Thank you, Taysir.",
+        "name": "Mohammed K.",
+        "role": "Manager"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "How long does the process take?",
+        "a": "The process takes between two weeks and three months, depending on the selected package and application type."
+      },
+      {
+        "q": "Which documents do I need to provide?",
+        "a": "Your Civil ID, passport, university certificate, and salary certificate."
+      },
+      {
+        "q": "Are government fees included in the service price?",
+        "a": "No. Government fees are paid separately."
+      },
+      {
+        "q": "Can I receive support in Arabic?",
+        "a": "Yes. Our team provides support in both Arabic and English."
+      },
+      {
+        "q": "Do you provide services for Kuwaiti citizens?",
+        "a": "Yes. We serve both Kuwaiti citizens and expatriates."
+      },
+      {
+        "q": "Can I convert my foreign driving license?",
+        "a": "Yes, provided your license was issued by an approved country."
+      }
+    ]
+  },
+  "finalCta": {
+    "headline": "Ready to Start the Process?",
+    "button": "Send a WhatsApp Message Now"
+  },
   "contact": {
-    "phone": "+965 XXXX XXXX",
+    "title": "Contact Us",
+    "whatsapp": "WhatsApp",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "hours": "Working Hours",
+    "hoursValue": "Saturday–Thursday, 9 AM–6 PM",
+    "phoneValue": "+965 XXXX XXXX",
     "phoneDial": "+965XXXXXXXX",
-    "whatsapp": "+965 XXXX XXXX",
+    "whatsappValue": "+965 XXXX XXXX",
     "whatsappDial": "965XXXXXXXX",
-    "email": "taysir.licensing@gmail.com",
-    "address": "Kuwait City, Kuwait"
+    "emailValue": "taysir.licensing@gmail.com",
+    "addressValue": "Kuwait City, Kuwait",
+    "form": {
+      "name": "Name",
+      "phone": "Phone Number",
+      "message": "Message",
+      "submit": "Send"
+    }
   },
   "footer": {
-    "tagline": "Clear, dependable support for your Kuwait driving license journey.",
-    "quickLinks": "Quick links",
-    "contactHeading": "Contact",
-    "workingHours": "Working hours",
+    "tagline": "Your Kuwait driving license — without the headache",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "workingHours": "Working Hours",
     "saturdayThursday": "Saturday–Thursday",
     "weekdayHours": "9 AM–6 PM",
     "friday": "Friday",
     "closed": "Closed",
     "instagramAriaLabel": "Visit Taysir Licensing on Instagram",
     "whatsappAriaLabel": "Contact Taysir Licensing on WhatsApp",
-    "copyright": "Copyright © 2026 Taysir Licensing",
+    "copyright": "© 2026 Taysir Licensing",
     "rightsReserved": "All rights reserved"
+  },
+  "services": {
+    "title": "Our Services",
+    "items": [
+      {
+        "title": "Driving License Issuance",
+        "description": "We manage your Kuwaiti driving license application from start to finish.",
+        "price": "Starting from KWD 500",
+        "timeline": "2+ months"
+      },
+      {
+        "title": "Government Paperwork Processing",
+        "description": "We manage the required government paperwork on your behalf.",
+        "price": "Starting from KWD 150",
+        "timeline": "1–2 weeks"
+      },
+      {
+        "title": "Driving School Booking",
+        "description": "We arrange your booking with a suitable driving school.",
+        "price": "Starting from KWD 120",
+        "timeline": "2–3 weeks"
+      },
+      {
+        "title": "Medical Examination Assistance",
+        "description": "We coordinate the medical examination required for your application.",
+        "price": "Starting from KWD 100",
+        "timeline": "1–3 days"
+      }
+    ]
   },
   "whatsapp": {
     "label": "Send WhatsApp",

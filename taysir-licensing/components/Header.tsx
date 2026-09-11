@@ -114,7 +114,7 @@ export default function Header() {
                   : 'text-text after:hover:scale-x-100'
               }`}
             >
-              {t(`navigation.${key}`)}
+              {t(`nav.${key}`)}
             </Link>
           ))}
         </nav>
@@ -124,10 +124,10 @@ export default function Header() {
           <a
             href={`tel:${t('contact.phoneDial')}`}
             className="flex items-center gap-2 whitespace-nowrap rounded-full border border-primary/20 px-3 py-2 text-sm font-semibold text-primary outline-none transition-colors hover:bg-primary hover:text-white focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2"
-            aria-label={t('header.callAriaLabel', {phone: t('contact.phone')})}
+            aria-label={t('header.callAriaLabel', {phone: t('contact.phoneValue')})}
           >
             <Phone aria-hidden="true" className="size-4" />
-            <span dir="ltr">{t('contact.phone')}</span>
+            <span dir="ltr">{t('contact.phoneValue')}</span>
           </a>
         </div>
 
@@ -203,7 +203,7 @@ export default function Header() {
                         : 'text-text hover:bg-lightBg hover:text-primary'
                     }`}
                   >
-                    {t(`navigation.${key}`)}
+                    {t(`nav.${key}`)}
                   </Link>
                 </motion.div>
               ))}
@@ -214,10 +214,10 @@ export default function Header() {
               <a
                 href={`tel:${t('contact.phoneDial')}`}
                 className="flex items-center gap-2 rounded-full bg-primary px-4 py-2.5 font-semibold text-white outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2"
-                aria-label={t('header.callAriaLabel', {phone: t('contact.phone')})}
+                aria-label={t('header.callAriaLabel', {phone: t('contact.phoneValue')})}
               >
                 <Phone aria-hidden="true" className="size-4" />
-                <span dir="ltr">{t('contact.phone')}</span>
+                <span dir="ltr">{t('contact.phoneValue')}</span>
               </a>
             </div>
           </motion.div>
