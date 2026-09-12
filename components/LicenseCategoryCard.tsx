@@ -1,6 +1,7 @@
 'use client';
 
 import {Bike, Bus, Car, Clock, MessageCircle, Tractor, Truck, type LucideIcon} from 'lucide-react';
+import {motion} from 'framer-motion';
 import {useTranslations} from 'next-intl';
 
 import {createWhatsAppUrl} from '@/lib/contact';
@@ -47,18 +48,8 @@ export default function LicenseCategoryCard({
     category: locale === 'ar' ? category.nameAr : category.nameEn
   });
 
-  const prices = [
-    {
-      residency: 'citizen' as const,
-      label: t('citizenLabel'),
-      value: category.citizenPrice
-    },
-    {
-      residency: 'expat' as const,
-      label: t('expatLabel'),
-      value: category.expatPrice
-    }
-  ];
+  const selectedPrice =
+    selectedResidency === 'citizen' ? category.citizenPrice : category.expatPrice;
 
   return (
     <article
@@ -82,25 +73,20 @@ export default function LicenseCategoryCard({
 
       <div aria-hidden="true" className="my-4 border-t border-gray-200" />
 
-      <div>
-        <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+      <div className="my-4">
+        <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-gray-500">
           {t('priceLabel')}
         </p>
-        <div className="mt-2 grid grid-cols-2 gap-2">
-          {prices.map(({residency, label, value}) => {
-            const isSelected = residency === selectedResidency;
-
-            return (
-              <div
-                key={residency}
-                className={`rounded-lg p-2 ${isSelected ? 'bg-lightBg' : ''}`}
-                aria-current={isSelected ? 'true' : undefined}
-              >
-                <p className="text-xs text-gray-500">{label}</p>
-                <p className="mt-1 font-bold text-primary">{value}</p>
-              </div>
-            );
-          })}
+        <div aria-live="polite" aria-atomic="true">
+          <motion.p
+            key={selectedResidency}
+            className="text-xl font-bold text-primary md:text-2xl"
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{duration: 0.2}}
+          >
+            {selectedPrice}
+          </motion.p>
         </div>
       </div>
 

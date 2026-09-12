@@ -441,8 +441,10 @@
     "helpText": "Need help choosing?",
     "helpButton": "Talk to Us",
     "helpMessage": "I need help choosing a license type",
-    "toggleCitizen": "I am a Citizen",
-    "toggleExpat": "I am an Expatriate",
+    "toggleCitizen": "I'm a Citizen",
+    "toggleExpat": "I'm an Expatriate",
+    "toggleCitizenAriaLabel": "Show citizen prices",
+    "toggleExpatAriaLabel": "Show expatriate prices",
     "categories": [
       {
         "id": "private",

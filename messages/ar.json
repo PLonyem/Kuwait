@@ -434,7 +434,7 @@
     "subtitle": "كل ما تحتاجه لاستخراج رخصتك — بالأسعار والمدة الزمنية",
     "citizenLabel": "مواطن",
     "expatLabel": "مقيم",
-    "priceLabel": "الأسعار",
+    "priceLabel": "السعر",
     "timelineLabel": "المدة",
     "whatsappButton": "أرسل رسالة واتساب",
     "cardWhatsappAriaLabel": "أرسل رسالة واتساب لـ {category}",
@@ -443,6 +443,8 @@
     "helpMessage": "أحتاج مساعدة في اختيار نوع الرخصة",
     "toggleCitizen": "أنا مواطن",
     "toggleExpat": "أنا مقيم",
+    "toggleCitizenAriaLabel": "عرض أسعار المواطنين",
+    "toggleExpatAriaLabel": "عرض أسعار المقيمين",
     "categories": [
       {
         "id": "private",

@@ -1,7 +1,7 @@
 'use client';
 
 import {useLocale, useTranslations} from 'next-intl';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
 import {createWhatsAppUrl} from '@/lib/contact';
 
@@ -16,10 +16,40 @@ export default function LicenseCategoriesGrid() {
   const [selectedResidency, setSelectedResidency] = useState<Residency>('citizen');
   const categories = t.raw('categories') as LicenseCategory[];
   const helpUrl = createWhatsAppUrl(t('helpMessage'));
-  const residencyOptions: Array<{value: Residency; label: string}> = [
-    {value: 'citizen', label: t('toggleCitizen')},
-    {value: 'expat', label: t('toggleExpat')}
+  const residencyOptions: Array<{value: Residency; label: string; ariaLabel: string}> = [
+    {
+      value: 'citizen',
+      label: t('toggleCitizen'),
+      ariaLabel: t('toggleCitizenAriaLabel')
+    },
+    {
+      value: 'expat',
+      label: t('toggleExpat'),
+      ariaLabel: t('toggleExpatAriaLabel')
+    }
   ];
+
+  useEffect(() => {
+    try {
+      const storedResidency = window.localStorage.getItem('taysir-residency');
+
+      if (storedResidency === 'citizen' || storedResidency === 'expat') {
+        setSelectedResidency(storedResidency);
+      }
+    } catch {
+      // The default remains available when storage is disabled.
+    }
+  }, []);
+
+  function selectResidency(residency: Residency) {
+    setSelectedResidency(residency);
+
+    try {
+      window.localStorage.setItem('taysir-residency', residency);
+    } catch {
+      // The toggle still works for the current visit when storage is disabled.
+    }
+  }
 
   return (
     <section className="w-full bg-lightBg px-6 py-16 lg:py-24">
@@ -32,23 +62,25 @@ export default function LicenseCategoriesGrid() {
         </p>
 
         <div
-          className="mb-12 flex justify-center gap-2"
-          role="group"
+          className="mb-12 flex flex-wrap justify-center gap-2"
+          role="tablist"
           aria-label={t('title')}
         >
-          {residencyOptions.map(({value, label}) => {
+          {residencyOptions.map(({value, label, ariaLabel}) => {
             const isActive = selectedResidency === value;
 
             return (
               <button
                 key={value}
                 type="button"
-                aria-pressed={isActive}
-                onClick={() => setSelectedResidency(value)}
-                className={`rounded-full border px-6 py-2 font-semibold outline-none transition-colors duration-200 focus-visible:ring-4 focus-visible:ring-primary/25 focus-visible:ring-offset-2 ${
+                role="tab"
+                aria-selected={isActive}
+                aria-label={ariaLabel}
+                onClick={() => selectResidency(value)}
+                className={`rounded-full border px-6 py-2 font-medium outline-none transition-all duration-200 focus-visible:ring-4 focus-visible:ring-primary/25 focus-visible:ring-offset-2 ${
                   isActive
                     ? 'border-primary bg-primary text-white'
-                    : 'border-gray-300 bg-white text-gray-600 hover:border-primary hover:text-primary'
+                    : 'border-gray-300 bg-white text-gray-600 hover:border-primary hover:bg-gray-50 hover:text-primary'
                 }`}
               >
                 {label}

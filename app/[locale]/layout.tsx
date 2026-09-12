@@ -7,6 +7,7 @@ import type {ReactNode} from 'react';
 
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import ScrollRestoration from '@/components/ScrollRestoration';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import {isLocale, locales} from '@/i18n';
 
@@ -63,7 +64,41 @@ export default async function LocaleLayout({
       dir={direction}
       className={`${cairo.variable} ${inter.variable}`}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function () {
+              var navigation = performance.getEntriesByType('navigation')[0];
+              var isReload = navigation
+                ? navigation.type === 'reload'
+                : performance.navigation && performance.navigation.type === 1;
+
+              if (!isReload) return;
+
+              if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+              }
+
+              var resetScroll = function () { window.scrollTo(0, 0); };
+              resetScroll();
+              window.addEventListener('DOMContentLoaded', resetScroll, {once: true});
+              window.addEventListener('pageshow', function () {
+                resetScroll();
+                requestAnimationFrame(function () {
+                  setTimeout(function () {
+                    resetScroll();
+                    if ('scrollRestoration' in history) {
+                      history.scrollRestoration = 'auto';
+                    }
+                  }, 100);
+                });
+              }, {once: true});
+            })();`
+          }}
+        />
+      </head>
       <body className={localeFont}>
+        <ScrollRestoration />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <a
             href="#main-content"
