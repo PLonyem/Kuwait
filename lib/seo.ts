@@ -7,7 +7,7 @@ export const siteUrl = 'https://taysir.com';
 
 export async function createPageMetadata(
   locale: Locale,
-  page: 'home' | 'services' | 'requirements' | 'pricing' | 'process' | 'about' | 'contact',
+  page: 'home' | 'licenses' | 'services' | 'requirements' | 'pricing' | 'process' | 'about' | 'contact',
   pathname = ''
 ): Promise<Metadata> {
   const t = await getTranslations({locale, namespace: `metadata.${page}`});

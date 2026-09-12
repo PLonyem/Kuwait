@@ -7,6 +7,10 @@
       "title": "Taysir — Your Kuwait Driving License Without the Headache",
       "description": "Kuwait driving license concierge service. Send one WhatsApp message and we handle everything."
     },
+    "licenses": {
+      "title": "License Types — Taysir",
+      "description": "All Kuwait driving license types with prices and timelines. Choose your license and send a WhatsApp message."
+    },
     "services": {
       "title": "Our Services — Taysir",
       "description": "Complete Kuwait driving license application and document-clearing services."
@@ -34,6 +38,7 @@
   },
   "nav": {
     "home": "Home",
+    "licenses": "License Types",
     "services": "Services",
     "requirements": "Requirements",
     "pricing": "Pricing",
@@ -432,8 +437,10 @@
     "priceLabel": "Price",
     "timelineLabel": "Timeline",
     "whatsappButton": "Send a WhatsApp Message",
+    "cardWhatsappAriaLabel": "Send a WhatsApp message for {category}",
     "helpText": "Need help choosing?",
     "helpButton": "Talk to Us",
+    "helpMessage": "I need help choosing a license type",
     "toggleCitizen": "I am a Citizen",
     "toggleExpat": "I am an Expatriate",
     "categories": [
@@ -510,6 +517,13 @@
         "whatsappMessage": "I want to obtain a construction vehicle license"
       }
     ]
+  },
+  "licensesPage": {
+    "title": "License Types",
+    "subtitle": "Choose the right license for you — with prices and timelines",
+    "tiersTitle": "Choose Your Service Level",
+    "finalCta": "Didn't find what you're looking for? Talk to us",
+    "schemaName": "Kuwait Driving License Types"
   },
   "accessibility": {"skipToContent": "Skip to main content"},
   "notFoundPage": {"title": "Page Not Found", "description": "Sorry, we could not find the page you requested.", "home": "Return Home"},

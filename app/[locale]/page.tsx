@@ -5,6 +5,7 @@ import Comparison from '@/components/Comparison';
 import FAQ from '@/components/FAQ';
 import FinalCTA from '@/components/FinalCTA';
 import Hero from '@/components/Hero';
+import LicenseCategoriesGrid from '@/components/LicenseCategoriesGrid';
 import PricingTable from '@/components/PricingTable';
 import ProcessTimeline from '@/components/ProcessTimeline';
 import Testimonials from '@/components/Testimonials';
@@ -52,6 +53,7 @@ export default async function HomePage({params}: LocalePageProps) {
         <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schema).replace(/</g, '\\u003c')}} />
       ))}
       <Hero />
+      <LicenseCategoriesGrid />
       <Comparison />
       <WhatWeHandle />
       <ProcessTimeline />

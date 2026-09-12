@@ -43,10 +43,9 @@ export default function LicenseCategoryCard({
     selectedResidency === 'citizen' ? t('toggleCitizen') : t('toggleExpat');
   const message = `${category.whatsappMessage}. ${residencyText}.`;
   const whatsappUrl = createWhatsAppUrl(message);
-  const whatsappAriaLabel =
-    locale === 'ar'
-      ? `أرسل رسالة واتساب لـ ${category.nameAr}`
-      : `Send a WhatsApp message for ${category.nameEn}`;
+  const whatsappAriaLabel = t('cardWhatsappAriaLabel', {
+    category: locale === 'ar' ? category.nameAr : category.nameEn
+  });
 
   const prices = [
     {

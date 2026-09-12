@@ -12,6 +12,7 @@ import LanguageToggle from './LanguageToggle';
 
 const navigationItems = [
   {key: 'home', href: '/'},
+  {key: 'licenses', href: '/licenses'},
   {key: 'services', href: '/services'},
   {key: 'requirements', href: '/requirements'},
   {key: 'pricing', href: '/pricing'},
@@ -87,7 +88,7 @@ export default function Header() {
         isScrolled ? 'shadow-[0_8px_24px_rgba(27,94,32,0.10)]' : ''
       }`}
     >
-      <div className="mx-auto grid h-full max-w-7xl grid-cols-[1fr_auto] items-center gap-4 px-6 lg:grid-cols-[auto_1fr_auto] lg:px-8">
+      <div className="mx-auto grid h-full max-w-7xl grid-cols-[1fr_auto] items-center gap-4 px-6 lg:px-8 xl:grid-cols-[auto_1fr_auto]">
         <Link
           href="/"
           locale={locale}
@@ -102,7 +103,7 @@ export default function Header() {
         </Link>
 
         <nav
-          className="hidden items-center justify-center gap-4 xl:gap-6 lg:flex"
+          className="hidden items-center justify-center gap-3 xl:flex"
           aria-label={t('header.primaryNavigation')}
         >
           {navigationItems.map(({key, href}) => (
@@ -122,7 +123,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center justify-end gap-4 lg:flex">
+        <div className="hidden items-center justify-end gap-3 xl:flex">
           <LanguageToggle />
           <a
             href={`tel:${phoneNumber}`}
@@ -138,7 +139,7 @@ export default function Header() {
           ref={menuButtonRef}
           type="button"
           onClick={() => setIsMenuOpen(true)}
-          className="justify-self-end rounded-md p-2 text-primary outline-none transition-colors hover:bg-lightBg focus-visible:ring-2 focus-visible:ring-secondary lg:hidden"
+          className="justify-self-end rounded-md p-2 text-primary outline-none transition-colors hover:bg-lightBg focus-visible:ring-2 focus-visible:ring-secondary xl:hidden"
           aria-label={t('header.openMenu')}
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
@@ -155,7 +156,7 @@ export default function Header() {
             role="dialog"
             aria-modal="true"
             aria-label={t('header.mobileNavigation')}
-            className="fixed inset-0 z-[70] flex min-h-dvh flex-col bg-background px-6 py-5 lg:hidden"
+            className="fixed inset-0 z-[70] flex min-h-dvh flex-col bg-background px-6 py-5 xl:hidden"
             initial={{x: locale === 'ar' ? '100%' : '-100%'}}
             animate={{x: 0}}
             exit={{x: locale === 'ar' ? '100%' : '-100%'}}
