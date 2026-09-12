@@ -217,27 +217,30 @@
         "handledTasks": ["Complete the issuance follow-up", "Check and deliver the finished license"]
       }
     ],
-    "paymentCard": {
-      "title": "Payment Point",
-      "subtitle": "At this stage, payment is confirmed so work can begin",
-      "pricesLabel": "Prices by package:",
-      "prices": [
-        {"tier": "Essential Service", "amount": "KWD 500–750"},
-        {"tier": "Concierge Service", "amount": "KWD 1,150–1,600"},
-        {"tier": "VIP Service", "amount": "KWD 2,650–3,700"}
-      ],
-      "methodsLabel": "Payment methods:",
-      "methods": "KNET • Bank transfer • Cash",
-      "noteLabel": "Note:",
-      "note": "Government fees (KWD 100–266) are paid directly by the client to the government",
-      "ctaButton": "📱 Confirm Payment via WhatsApp",
-      "ctaMessage": "I want to confirm payment to begin my license application",
-      "postPaymentNote": "We begin work immediately after payment is confirmed"
-    },
     "ctaText": "Ready to begin? Send us a WhatsApp message",
     "ctaButton": "Start Now",
     "ctaAriaLabel": "Start your license application on WhatsApp",
     "prefilledMessage": "I want to start applying for my license"
+  },
+  "commitmentBlock": {
+    "headline": "🚀 Ready to Get Started?",
+    "subheadline": "A 50% upfront payment confirms the continuation of your process",
+    "pricesLabel": "Prices by package:",
+    "prices": [
+      {"tier": "Essential Package", "amount": "KWD 500–750"},
+      {"tier": "Concierge Package", "amount": "KWD 1,150–1,600"},
+      {"tier": "VIP Package", "amount": "KWD 2,650–3,700"}
+    ],
+    "paymentPlanTitle": "Payment plan:",
+    "paymentPlan": [
+      {"step": "50% upfront payment", "timing": "To begin the work"},
+      {"step": "50% final payment", "timing": "When you receive the license"}
+    ],
+    "methodsLabel": "Payment methods:",
+    "methods": "KNET • Bank transfer • Cash",
+    "ctaButton": "📱 Confirm Payment and Start via WhatsApp",
+    "ctaMessage": "I want to confirm payment and begin my license application process",
+    "note": "Note: Government fees (KWD 100–266) are paid directly by the client to the government"
   },
   "trustSignals": {
     "title": "Why Our Clients Trust Us",
