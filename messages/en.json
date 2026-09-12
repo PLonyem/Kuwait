@@ -131,6 +131,88 @@
       }
     ]
   },
+  "walkthrough": {
+    "title": "How Does the Service Work?",
+    "subtitle": "From one WhatsApp message to a license in your hand",
+    "clientLabel": "What you need to do",
+    "handledLabel": "What we handle",
+    "steps": [
+      {
+        "number": "1",
+        "icon": "MessageCircle",
+        "title": "Send a WhatsApp Message",
+        "description": "Tell us which type of license you need",
+        "detail": "We reply within minutes with a clear list of requirements.",
+        "duration": "Within minutes",
+        "fullDetails": [
+          "Your first message starts with a quick, no-obligation review of your situation and the license category you need.",
+          "We explain the available service packages, expected government steps, and likely overall timeline before you commit."
+        ],
+        "clientTasks": ["Tell us the license type", "Answer a few eligibility questions"],
+        "handledTasks": ["Review your request", "Send a tailored requirements checklist"]
+      },
+      {
+        "number": "2",
+        "icon": "FileText",
+        "title": "Send Your Documents",
+        "description": "Share copies of your Civil ID and passport",
+        "detail": "We review every document and confirm it is valid before submission.",
+        "duration": "Within one hour",
+        "fullDetails": [
+          "Send clear photos or scans securely through WhatsApp. We check names, dates, image quality, and missing pages.",
+          "If anything needs replacing or updating, we tell you exactly what is needed before the application moves forward."
+        ],
+        "clientTasks": ["Send clear document copies", "Provide any missing item we flag"],
+        "handledTasks": ["Validate every document", "Organize the complete application file"]
+      },
+      {
+        "number": "3",
+        "icon": "FolderOpen",
+        "title": "We Open Your Traffic File",
+        "description": "We handle the government paperwork for you",
+        "detail": "We visit the traffic department on your behalf and open your file.",
+        "duration": "1–3 business days",
+        "fullDetails": [
+          "Once your documents are approved, we prepare the application and manage the traffic-department procedures included in your package.",
+          "You receive progress updates, so you always know where your documents are and what has been completed."
+        ],
+        "clientTasks": ["Approve the final application details", "Attend only if an authority requires you"],
+        "handledTasks": ["Prepare and submit the file", "Follow up with the traffic department"]
+      },
+      {
+        "number": "4",
+        "icon": "ClipboardCheck",
+        "title": "We Book Your Tests",
+        "description": "Theory test and road test",
+        "detail": "We find the nearest available appointment and accompany you.",
+        "duration": "Varies by package and availability",
+        "fullDetails": [
+          "We coordinate the required theory and road-test appointments around the earliest official availability and your schedule.",
+          "Before each appointment, we confirm the location, timing, documents to bring, and the support included in your package."
+        ],
+        "clientTasks": ["Confirm your availability", "Attend and complete the required tests"],
+        "handledTasks": ["Book available appointments", "Send reminders and coordinate support"]
+      },
+      {
+        "number": "5",
+        "icon": "Award",
+        "title": "Receive Your License",
+        "description": "We deliver the license to your door",
+        "detail": "Receive it ready to use without another unnecessary trip.",
+        "duration": "After final approval",
+        "fullDetails": [
+          "After the required approvals and successful tests, we complete the final issuance steps covered by your package.",
+          "We check the finished license details and arrange delivery, bringing the process to a clear and convenient close."
+        ],
+        "clientTasks": ["Confirm the delivery address", "Check your details when received"],
+        "handledTasks": ["Complete the issuance follow-up", "Check and deliver the finished license"]
+      }
+    ],
+    "ctaText": "Ready to begin? Send us a WhatsApp message",
+    "ctaButton": "Start Now",
+    "ctaAriaLabel": "Start your license application on WhatsApp",
+    "prefilledMessage": "I want to start applying for my license"
+  },
   "trust": {
     "reviews": "4.9 (127 reviews)",
     "clients": "+500 satisfied clients",
