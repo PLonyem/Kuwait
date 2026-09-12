@@ -11,6 +11,10 @@ export const phoneNumber =
 export const emailAddress =
   process.env.NEXT_PUBLIC_EMAIL || 'taysir.licensing@gmail.com';
 
+export const googleBusinessUrl =
+  process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_URL ||
+  'https://www.google.com/search?q=Taysir+Licensing+Kuwait';
+
 export function createWhatsAppUrl(message: string) {
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 }

@@ -9,6 +9,7 @@ const quickLinks = [
   {key: 'requirements', href: '/requirements'},
   {key: 'pricing', href: '/pricing'},
   {key: 'process', href: '/process'},
+  {key: 'trackStatus', href: '/track'},
   {key: 'faq', href: '/#faq'},
   {key: 'contact', href: '/contact'}
 ] as const;
@@ -72,7 +73,7 @@ export default function Footer() {
                   locale={locale}
                   className="rounded-sm text-white/80 outline-none transition-colors hover:text-secondary focus-visible:ring-2 focus-visible:ring-secondary"
                 >
-                  {t(`nav.${key}`)}
+                  {key === 'trackStatus' ? t('footer.trackStatus') : t(`nav.${key}`)}
                 </Link>
               </li>
             ))}

@@ -1,0 +1,17 @@
+{
+  "clients": [
+    {
+      "civilId": "28XXXXXXXX",
+      "name": "أحمد م.",
+      "tier": "concierge",
+      "residency": "expat",
+      "status": "fileOpened",
+      "lastUpdated": "2026-01-15",
+      "timeline": [
+        {"status": "documentsReceived", "date": "2026-01-05"},
+        {"status": "documentsVerified", "date": "2026-01-07"},
+        {"status": "fileOpened", "date": "2026-01-15"}
+      ]
+    }
+  ]
+}

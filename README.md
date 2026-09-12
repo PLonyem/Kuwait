@@ -44,12 +44,15 @@ npm run start
 | `NEXT_PUBLIC_WHATSAPP_NUMBER` | WhatsApp number in international format without `+` or spaces |
 | `NEXT_PUBLIC_PHONE_NUMBER` | Display and click-to-call phone number |
 | `NEXT_PUBLIC_EMAIL` | Public contact email address |
+| `NEXT_PUBLIC_GOOGLE_BUSINESS_URL` | Direct URL for the verified Google Business profile |
 
 The placeholder fallbacks are safe for development but must be replaced before launch.
 
 ## Content and pricing updates
 
 All public copy is stored in `messages/ar.json` and `messages/en.json`. Keep the same key structure in both files. Homepage and pricing-page plans live under the `pricing` namespace; additional services and government fees live under `pricingPage`.
+
+Application statuses are maintained manually in `data/client-status.json`. Keep client names masked, update `lastUpdated` whenever a stage changes, and never commit an unmasked Civil ID to a public repository.
 
 The downloadable requirements checklists are in `public/documents`. Regenerate both localized PDFs whenever the requirements change.
 

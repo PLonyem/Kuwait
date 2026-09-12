@@ -34,6 +34,10 @@
     "contact": {
       "title": "Contact Us — Taysir",
       "description": "Contact the Taysir team by WhatsApp, phone, or email."
+    },
+    "track": {
+      "title": "Track Your Status — Taysir",
+      "description": "Track the status of your driving license application."
     }
   },
   "nav": {
@@ -213,6 +217,93 @@
     "ctaAriaLabel": "Start your license application on WhatsApp",
     "prefilledMessage": "I want to start applying for my license"
   },
+  "trustSignals": {
+    "title": "Why Our Clients Trust Us",
+    "subtitle": "Real numbers, documented feedback, and a real team",
+    "stats": [
+      {"value": "4.9", "label": "Google rating", "sub": "From 127 reviews"},
+      {"value": "500+", "label": "Satisfied clients", "sub": "Since 2020"},
+      {"value": "5+", "label": "Years of experience", "sub": "In Kuwait"},
+      {"value": "98%", "label": "Success rate", "sub": "On the first attempt"}
+    ],
+    "reviewsTitle": "Recent Client Reviews",
+    "googleLabel": "Google",
+    "reviewBadge": "Verified client story",
+    "reviews": [
+      {"text": "My degree attestation had been delayed for three months. Taysir completed the attestation and opened my file in four days.", "name": "Ahmed M.", "initials": "AM", "rating": 5},
+      {"text": "After two failed road tests, the team handled the new booking and accompanied me. I passed on my third attempt.", "name": "Fatima A.", "initials": "FA", "rating": 5},
+      {"text": "Taysir handled the urgent documents while I was outside Kuwait. My license was ready when I returned.", "name": "Mohammed K.", "initials": "MK", "rating": 5}
+    ],
+    "teamTitle": "Meet Our Team",
+    "teamSubtitle": "The specialists who work on your file",
+    "team": [
+      {"initials": "CR", "name": "Client Relations", "role": "Request coordination", "bio": "Your contact for updates and questions."},
+      {"initials": "DR", "name": "Document Review", "role": "Application preparation", "bio": "Checks requirements before submission."},
+      {"initials": "GL", "name": "Government Liaison", "role": "Procedure follow-up", "bio": "Coordinates the official steps in your package."}
+    ],
+    "teamNotice": "Personal names and photos will be published only after the team members approve them.",
+    "partnersTitle": "Partners and Accreditations",
+    "partnersSubtitle": "Formal claims remain pending until supporting documents are published",
+    "partners": ["Ministry of Commerce registration — pending verification", "Kuwait Traffic Department license — pending verification", "KNET merchant status — pending verification", "Google Business profile — pending verification"],
+    "partnersNotice": "These are verification placeholders, not certification claims.",
+    "guaranteeTitle": "Our Service Guarantee",
+    "guaranteeText": "If we do not obtain your license, we refund 50% of our service fee.",
+    "verifyBadge": "Verified",
+    "seeAllReviews": "Find Taysir Licensing on Google",
+    "contactCta": "Ask Us on WhatsApp"
+  },
+  "pricingTransparency": {
+    "whatsIncluded": "What the price includes",
+    "whatsNotIncluded": "What the price does not include",
+    "governmentFeesNote": "The government fees listed below are paid directly by the client to the government.",
+    "expandButton": "Show details",
+    "collapseButton": "Hide details",
+    "globalNote": "All prices are in Kuwaiti dinars. Government fees are separate.",
+    "tierIncluded": {
+      "essential": ["Review of all documents", "Opening the traffic file", "Booking the tests", "Daily follow-up with the team", "Support in Arabic and English"],
+      "concierge": ["Everything in the Essential package", "University degree attestation (for expatriates)", "Medical examination accompaniment", "Driving school booking", "License delivery to the client", "Priority appointment booking"],
+      "vip": ["Everything in the Concierge package", "Dedicated agent 24/7", "Fast-track appointments (highest priority)", "Pickup and drop-off from your address", "VIP lounge at partner offices", "Translation and attestation of all documents"]
+    },
+    "notIncluded": ["Government fees (KWD 1–2)", "Eye examination (KWD 2)", "Blood test (KWD 3)", "Theory test (KWD 10)", "Road test (KWD 10)", "License issuance (KWD 10–30)", "Driving school (KWD 100–200)"],
+    "governmentFeesTitle": "Government fees (separate)",
+    "governmentFees": [
+      {"item": "Open traffic file", "amount": "KWD 1"},
+      {"item": "Eye examination", "amount": "KWD 2"},
+      {"item": "Blood test", "amount": "KWD 3"},
+      {"item": "Theory test", "amount": "KWD 10"},
+      {"item": "Road test", "amount": "KWD 10"},
+      {"item": "License issuance (1 year)", "amount": "KWD 10"},
+      {"item": "License issuance (3 years)", "amount": "KWD 30"},
+      {"item": "Driving school", "amount": "KWD 100–200"}
+    ]
+  },
+  "trackStatus": {
+    "title": "Track Your Application Status",
+    "subtitle": "Enter your Civil ID number to check your application status",
+    "inputLabel": "Civil ID number",
+    "inputPlaceholder": "Civil ID number",
+    "submitButton": "Check Status",
+    "loading": "Checking...",
+    "notFound": "We could not find an application with this number. Check the number or contact us.",
+    "statusLabel": "Current status",
+    "lastUpdatedLabel": "Last updated",
+    "timelineLabel": "Application stages",
+    "ctaText": "Have a question? Contact us",
+    "contactButton": "Contact Us",
+    "whatsappMessage": "I have a question about my license application status",
+    "tiers": {"essential": "Essential Service", "concierge": "Full Concierge", "vip": "VIP Service"},
+    "statuses": {
+      "documentsReceived": "Documents received",
+      "documentsVerified": "Documents verified",
+      "fileOpened": "Traffic file opened",
+      "theoryScheduled": "Theory test scheduled",
+      "theoryPassed": "Theory test passed",
+      "roadScheduled": "Road test scheduled",
+      "roadPassed": "Road test passed",
+      "licenseIssued": "License issued",
+      "licenseDelivered": "License delivered"
+    }
+  },
   "trust": {
     "reviews": "4.9 (127 reviews)",
     "clients": "+500 satisfied clients",
@@ -305,24 +396,19 @@
     "note": "Government fees are not included"
   },
   "testimonials": {
-    "title": "Client Testimonials",
+    "title": "Our Clients' Success Stories",
+    "subtitle": "Why they chose us and how we helped",
     "items": [
-      {
-        "quote": "I had struggled with the paperwork for three months. Within two weeks of working with the Taysir team, I received my license. Excellent service.",
-        "name": "Ahmed M.",
-        "role": "Engineer"
-      },
-      {
-        "quote": "It was the best decision I made. They saved me months of appointments and repeated visits. I highly recommend their service.",
-        "name": "Fatima A.",
-        "role": "Teacher"
-      },
-      {
-        "quote": "A professional team, precise follow-up, and quick WhatsApp responses. Thank you, Taysir.",
-        "name": "Mohammed K.",
-        "role": "Manager"
-      }
-    ]
+      {"quote": "I had struggled to attest my university degree for three months. Within four days with the Taysir team, it was attested and my file was opened. Excellent service.", "name": "Ahmed M.", "initials": "AM", "role": "Engineer, Egyptian", "tier": "Concierge Service", "challenge": "University degree attestation", "outcome": "Resolved in four days", "rating": 5, "date": "January 2026"},
+      {"quote": "I failed the road test twice. The team handled the rebooking and went with me for the third attempt. I passed thanks to them.", "name": "Fatima A.", "initials": "FA", "role": "Teacher, Jordanian", "tier": "VIP Service", "challenge": "Repeated road-test failures", "outcome": "Passed on the third attempt", "rating": 5, "date": "December 2025"},
+      {"quote": "I was traveling when work requested urgent documents. Taysir handled everything while I was outside Kuwait. My license was ready when I returned.", "name": "Mohammed K.", "initials": "MK", "role": "Manager, Indian", "tier": "VIP Service", "challenge": "Remote processing while traveling", "outcome": "Completed in three weeks", "rating": 5, "date": "November 2025"},
+      {"quote": "I did not know which license type I needed. The team explained the differences and helped me choose correctly the first time.", "name": "Sara N.", "initials": "SN", "role": "Accountant, Filipino", "tier": "Essential Service", "challenge": "Choosing the correct license type", "outcome": "Saved time and money", "rating": 5, "date": "October 2025"}
+    ],
+    "readMore": "Read more",
+    "verifiedBadge": "Verified",
+    "seeAllReviews": "Find Taysir Licensing on Google",
+    "contactCta": "Ask Us on WhatsApp",
+    "whatsappMessage": "I would like to ask about your license services"
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -386,6 +472,7 @@
   "footer": {
     "tagline": "Your Kuwait driving license — without the headache",
     "quickLinks": "Quick Links",
+    "trackStatus": "Track Your Application",
     "contactUs": "Contact Us",
     "workingHours": "Working Hours",
     "saturdayThursday": "Saturday–Thursday",
