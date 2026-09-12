@@ -271,6 +271,11 @@
       }
     ]
   },
+  "wayfinding": {
+    "headline": "Want to see pricing or license types?",
+    "licenseTypes": "License Types",
+    "pricing": "Pricing"
+  },
   "finalCta": {
     "headline": "Ready to Start the Process?",
     "button": "Send a WhatsApp Message Now"
