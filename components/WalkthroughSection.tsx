@@ -5,12 +5,14 @@ import {
   Award,
   Check,
   ClipboardCheck,
+  CreditCard,
   FileText,
   FolderOpen,
   MessageCircle,
   type LucideIcon
 } from 'lucide-react';
 import {useTranslations} from 'next-intl';
+import {Fragment} from 'react';
 
 import {createWhatsAppUrl} from '@/lib/contact';
 
@@ -24,6 +26,21 @@ type WalkthroughStep = {
   fullDetails: string[];
   clientTasks: string[];
   handledTasks: string[];
+  priceTag: {type: 'free' | 'included'; label: string};
+};
+
+type PaymentCardData = {
+  title: string;
+  subtitle: string;
+  pricesLabel: string;
+  prices: Array<{tier: string; amount: string}>;
+  methodsLabel: string;
+  methods: string;
+  noteLabel: string;
+  note: string;
+  ctaButton: string;
+  ctaMessage: string;
+  postPaymentNote: string;
 };
 
 type WalkthroughSectionProps = {
@@ -43,8 +60,10 @@ export default function WalkthroughSection({variant = 'homepage', locale}: Walkt
   const t = useTranslations('walkthrough');
   const reduceMotion = useReducedMotion();
   const steps = t.raw('steps') as WalkthroughStep[];
+  const paymentCard = t.raw('paymentCard') as PaymentCardData;
   const isFull = variant === 'full';
   const whatsappHref = createWhatsAppUrl(t('prefilledMessage'));
+  const paymentHref = createWhatsAppUrl(paymentCard.ctaMessage);
 
   return (
     <section
@@ -83,8 +102,8 @@ export default function WalkthroughSection({variant = 'homepage', locale}: Walkt
               const numberPosition = contentAtStart ? 'md:col-start-3' : 'md:col-start-1';
 
               return (
+                <Fragment key={step.number}>
                 <motion.li
-                key={step.number}
                 className="group relative grid grid-cols-[4rem_minmax(0,1fr)] items-start gap-x-4 md:grid-cols-[minmax(0,1fr)_4.5rem_minmax(0,1fr)] md:gap-x-7"
                 initial={reduceMotion ? false : {opacity: 0, y: 24}}
                 whileInView={{opacity: 1, y: 0}}
@@ -117,6 +136,11 @@ export default function WalkthroughSection({variant = 'homepage', locale}: Walkt
                   <span className="mt-3 inline-block rounded-full bg-accent px-3 py-1 text-xs font-bold text-primary">
                     {step.duration}
                   </span>
+                  <div>
+                    <span className={`mt-3 inline-block rounded-full px-3 py-1 text-xs font-medium ${getPriceTagClass(step.priceTag.type)}`}>
+                      {step.priceTag.label}
+                    </span>
+                  </div>
 
                   {isFull && (
                     <div className="mt-6 border-t border-gray-100 pt-5">
@@ -131,6 +155,10 @@ export default function WalkthroughSection({variant = 'homepage', locale}: Walkt
                   )}
                 </article>
                 </motion.li>
+                {index === 1 && (
+                  <PaymentPointCard data={paymentCard} href={paymentHref} reduceMotion={reduceMotion} />
+                )}
+                </Fragment>
               );
             })}
           </ol>
@@ -175,4 +203,41 @@ function TaskList({title, items, muted = false}: {title: string; items: string[]
       </ul>
     </div>
   );
+}
+
+function PaymentPointCard({data, href, reduceMotion}: {data: PaymentCardData; href: string; reduceMotion: boolean | null}) {
+  return (
+    <motion.li
+      className="relative z-10 mx-auto my-8 w-full max-w-2xl rounded-2xl border-2 border-accent bg-gradient-to-br from-primary to-primary/90 p-6 text-white shadow-xl sm:p-8"
+      initial={reduceMotion ? false : {opacity: 0, y: 18}}
+      whileInView={{opacity: 1, y: 0}}
+      viewport={{once: true, amount: 0.25}}
+      transition={{duration: 0.3}}
+      aria-label={data.title}
+    >
+      <div className="flex items-center gap-4">
+        <CreditCard aria-hidden="true" className="size-12 shrink-0 text-accent" />
+        <h3 className="text-2xl font-bold">{data.title}</h3>
+      </div>
+      <p className="mt-3 text-lg text-white/90">{data.subtitle}</p>
+
+      <div className="mt-6 rounded-lg bg-white/10 p-4">
+        <p className="mb-2 text-sm font-medium text-white/80">{data.pricesLabel}</p>
+        <dl className="divide-y divide-white/10">
+          {data.prices.map((price) => <div key={price.tier} className="flex justify-between gap-4 py-2"><dt className="text-sm text-white">{price.tier}</dt><dd className="shrink-0 text-sm font-bold text-accent">{price.amount}</dd></div>)}
+        </dl>
+      </div>
+
+      <div className="mt-4 rounded-lg bg-white/10 p-4"><p className="mb-1 text-sm font-medium text-white/80">{data.methodsLabel}</p><p className="text-sm text-white">{data.methods}</p></div>
+      <div className="mt-4 rounded-lg bg-white/10 p-4"><p className="mb-1 text-sm font-medium text-white/80">{data.noteLabel}</p><p className="text-sm italic text-white/90">{data.note}</p></div>
+      <a href={href} target="_blank" rel="noopener noreferrer" aria-label={data.ctaButton} className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-cta px-6 py-4 text-center text-lg font-bold text-white outline-none transition-transform hover:scale-[1.02] focus-visible:ring-4 focus-visible:ring-white/40"><MessageCircle aria-hidden="true" className="size-5" />{data.ctaButton}</a>
+      <p className="mt-4 text-center text-sm text-white/70">{data.postPaymentNote}</p>
+    </motion.li>
+  );
+}
+
+function getPriceTagClass(type: string) {
+  if (type === 'free') return 'border border-green-200 bg-green-50 text-green-700';
+  if (type === 'included') return 'border border-primary/20 bg-primary/10 text-primary';
+  return 'border border-gray-200 bg-gray-50 text-gray-700';
 }

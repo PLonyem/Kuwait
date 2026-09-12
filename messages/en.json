@@ -148,6 +148,7 @@
         "description": "Tell us which type of license you need",
         "detail": "We reply within minutes with a clear list of requirements.",
         "duration": "Within minutes",
+        "priceTag": {"type": "free", "label": "🆓 Free"},
         "fullDetails": [
           "Your first message starts with a quick, no-obligation review of your situation and the license category you need.",
           "We explain the available service packages, expected government steps, and likely overall timeline before you commit."
@@ -162,6 +163,7 @@
         "description": "Share copies of your Civil ID and passport",
         "detail": "We review every document and confirm it is valid before submission.",
         "duration": "Within one hour",
+        "priceTag": {"type": "free", "label": "🆓 Free review"},
         "fullDetails": [
           "Send clear photos or scans securely through WhatsApp. We check names, dates, image quality, and missing pages.",
           "If anything needs replacing or updating, we tell you exactly what is needed before the application moves forward."
@@ -176,6 +178,7 @@
         "description": "We handle the government paperwork for you",
         "detail": "We visit the traffic department on your behalf and open your file.",
         "duration": "1–3 business days",
+        "priceTag": {"type": "included", "label": "✓ Included in the price"},
         "fullDetails": [
           "Once your documents are approved, we prepare the application and manage the traffic-department procedures included in your package.",
           "You receive progress updates, so you always know where your documents are and what has been completed."
@@ -190,6 +193,7 @@
         "description": "Theory test and road test",
         "detail": "We find the nearest available appointment and accompany you.",
         "duration": "Varies by package and availability",
+        "priceTag": {"type": "included", "label": "✓ Included + government fees separate"},
         "fullDetails": [
           "We coordinate the required theory and road-test appointments around the earliest official availability and your schedule.",
           "Before each appointment, we confirm the location, timing, documents to bring, and the support included in your package."
@@ -204,6 +208,7 @@
         "description": "We deliver the license to your door",
         "detail": "Receive it ready to use without another unnecessary trip.",
         "duration": "After final approval",
+        "priceTag": {"type": "included", "label": "✓ Included in the price"},
         "fullDetails": [
           "After the required approvals and successful tests, we complete the final issuance steps covered by your package.",
           "We check the finished license details and arrange delivery, bringing the process to a clear and convenient close."
@@ -212,6 +217,23 @@
         "handledTasks": ["Complete the issuance follow-up", "Check and deliver the finished license"]
       }
     ],
+    "paymentCard": {
+      "title": "Payment Point",
+      "subtitle": "At this stage, payment is confirmed so work can begin",
+      "pricesLabel": "Prices by package:",
+      "prices": [
+        {"tier": "Essential Service", "amount": "KWD 500–750"},
+        {"tier": "Concierge Service", "amount": "KWD 1,150–1,600"},
+        {"tier": "VIP Service", "amount": "KWD 2,650–3,700"}
+      ],
+      "methodsLabel": "Payment methods:",
+      "methods": "KNET • Bank transfer • Cash",
+      "noteLabel": "Note:",
+      "note": "Government fees (KWD 100–266) are paid directly by the client to the government",
+      "ctaButton": "📱 Confirm Payment via WhatsApp",
+      "ctaMessage": "I want to confirm payment to begin my license application",
+      "postPaymentNote": "We begin work immediately after payment is confirmed"
+    },
     "ctaText": "Ready to begin? Send us a WhatsApp message",
     "ctaButton": "Start Now",
     "ctaAriaLabel": "Start your license application on WhatsApp",
@@ -226,31 +248,8 @@
       {"value": "5+", "label": "Years of experience", "sub": "In Kuwait"},
       {"value": "98%", "label": "Success rate", "sub": "On the first attempt"}
     ],
-    "reviewsTitle": "Recent Client Reviews",
-    "googleLabel": "Google",
-    "reviewBadge": "Verified client story",
-    "reviews": [
-      {"text": "My degree attestation had been delayed for three months. Taysir completed the attestation and opened my file in four days.", "name": "Ahmed M.", "initials": "AM", "rating": 5},
-      {"text": "After two failed road tests, the team handled the new booking and accompanied me. I passed on my third attempt.", "name": "Fatima A.", "initials": "FA", "rating": 5},
-      {"text": "Taysir handled the urgent documents while I was outside Kuwait. My license was ready when I returned.", "name": "Mohammed K.", "initials": "MK", "rating": 5}
-    ],
-    "teamTitle": "Meet Our Team",
-    "teamSubtitle": "The specialists who work on your file",
-    "team": [
-      {"initials": "CR", "name": "Client Relations", "role": "Request coordination", "bio": "Your contact for updates and questions."},
-      {"initials": "DR", "name": "Document Review", "role": "Application preparation", "bio": "Checks requirements before submission."},
-      {"initials": "GL", "name": "Government Liaison", "role": "Procedure follow-up", "bio": "Coordinates the official steps in your package."}
-    ],
-    "teamNotice": "Personal names and photos will be published only after the team members approve them.",
-    "partnersTitle": "Partners and Accreditations",
-    "partnersSubtitle": "Formal claims remain pending until supporting documents are published",
-    "partners": ["Ministry of Commerce registration — pending verification", "Kuwait Traffic Department license — pending verification", "KNET merchant status — pending verification", "Google Business profile — pending verification"],
-    "partnersNotice": "These are verification placeholders, not certification claims.",
     "guaranteeTitle": "Our Service Guarantee",
-    "guaranteeText": "If we do not obtain your license, we refund 50% of our service fee.",
-    "verifyBadge": "Verified",
-    "seeAllReviews": "Find Taysir Licensing on Google",
-    "contactCta": "Ask Us on WhatsApp"
+    "guaranteeText": "If we do not obtain your license, we refund 50% of our service fee."
   },
   "pricingTransparency": {
     "whatsIncluded": "What the price includes",
@@ -584,6 +583,28 @@
     "mission": "To make obtaining a driving license simple, fast, and transparent for every citizen and expatriate in Kuwait.",
     "whyTitle": "Why Choose Us?",
     "reasons": ["5+ years of experience", "Arabic- and English-speaking team", "Daily follow-up", "Transparent pricing", "Instant WhatsApp response"],
+    "googleReviewsTitle": "Google Reviews",
+    "googleLabel": "Google",
+    "reviewBadge": "Verified client story",
+    "reviews": [
+      {"text": "My degree attestation had been delayed for three months. Taysir completed the attestation and opened my file in four days.", "name": "Ahmed M.", "initials": "AM", "rating": 5},
+      {"text": "After two failed road tests, the team handled the new booking and accompanied me. I passed on my third attempt.", "name": "Fatima A.", "initials": "FA", "rating": 5},
+      {"text": "Taysir handled the urgent documents while I was outside Kuwait. My license was ready when I returned.", "name": "Mohammed K.", "initials": "MK", "rating": 5}
+    ],
+    "teamTitle": "Meet Our Team",
+    "teamSubtitle": "The specialists who work on your file",
+    "team": [
+      {"initials": "CR", "name": "Client Relations", "role": "Request coordination", "bio": "Your contact for updates and questions."},
+      {"initials": "DR", "name": "Document Review", "role": "Application preparation", "bio": "Checks requirements before submission."},
+      {"initials": "GL", "name": "Government Liaison", "role": "Procedure follow-up", "bio": "Coordinates the official steps in your package."}
+    ],
+    "teamNotice": "Personal names and photos will be published only after the team members approve them.",
+    "partnersTitle": "Partners and Accreditations",
+    "partnersSubtitle": "Formal claims remain pending until supporting documents are published",
+    "partners": ["Ministry of Commerce registration — pending verification", "Kuwait Traffic Department license — pending verification", "KNET merchant status — pending verification", "Google Business profile — pending verification"],
+    "partnersNotice": "These are verification placeholders, not certification claims.",
+    "verifyBadge": "Verified",
+    "seeAllReviews": "Find Taysir Licensing on Google",
     "stats": [{"value": "+500", "label": "Clients"}, {"value": "+5", "label": "Years of experience"}, {"value": "4.9", "label": "Rating"}],
     "finalCta": "Ready to begin? Send us a WhatsApp message"
   },
