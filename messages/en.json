@@ -424,6 +424,93 @@
       "whatsappMessage": "New website enquiry\nName: {name}\nPhone: {phone}\nMessage: {message}"
     }
   },
+  "licenseCategories": {
+    "title": "Choose the License You Need",
+    "subtitle": "Everything you need to obtain your license — including prices and timelines",
+    "citizenLabel": "Citizen",
+    "expatLabel": "Expatriate",
+    "priceLabel": "Price",
+    "timelineLabel": "Timeline",
+    "whatsappButton": "Send a WhatsApp Message",
+    "helpText": "Need help choosing?",
+    "helpButton": "Talk to Us",
+    "toggleCitizen": "I am a Citizen",
+    "toggleExpat": "I am an Expatriate",
+    "categories": [
+      {
+        "id": "private",
+        "icon": "Car",
+        "nameAr": "Private Driving License",
+        "nameEn": "Private Driving License",
+        "descriptionAr": "For private cars up to 7 passengers",
+        "descriptionEn": "For private cars up to 7 passengers",
+        "citizenPrice": "KWD 500",
+        "expatPrice": "KWD 750",
+        "timeline": "2+ months (8–12 weeks)",
+        "whatsappMessage": "I want to obtain a private driving license"
+      },
+      {
+        "id": "general-a",
+        "icon": "Truck",
+        "nameAr": "General License - Category A",
+        "nameEn": "General License - Category A",
+        "descriptionAr": "For heavy transport and large trucks",
+        "descriptionEn": "For heavy transport and large trucks",
+        "citizenPrice": "KWD 750",
+        "expatPrice": "KWD 1,100",
+        "timeline": "3+ months",
+        "whatsappMessage": "I want to obtain a General License - Category A"
+      },
+      {
+        "id": "general-b",
+        "icon": "Bus",
+        "nameAr": "General License - Category B",
+        "nameEn": "General License - Category B",
+        "descriptionAr": "For medium transport (7–25 passengers)",
+        "descriptionEn": "For medium transport (7–25 passengers)",
+        "citizenPrice": "KWD 650",
+        "expatPrice": "KWD 950",
+        "timeline": "2–3 months",
+        "whatsappMessage": "I want to obtain a General License - Category B"
+      },
+      {
+        "id": "motorcycle-a",
+        "icon": "Bike",
+        "nameAr": "Motorcycle License - Category A",
+        "nameEn": "Motorcycle License - Category A",
+        "descriptionAr": "For all motorcycles including ATVs",
+        "descriptionEn": "For all motorcycles including ATVs",
+        "citizenPrice": "KWD 450",
+        "expatPrice": "KWD 650",
+        "timeline": "2+ months",
+        "whatsappMessage": "I want to obtain a Motorcycle License - Category A"
+      },
+      {
+        "id": "motorcycle-b",
+        "icon": "Bike",
+        "nameAr": "Motorcycle License - Category B",
+        "nameEn": "Motorcycle License - Category B",
+        "descriptionAr": "For three-wheeled motorcycles",
+        "descriptionEn": "For three-wheeled motorcycles",
+        "citizenPrice": "KWD 400",
+        "expatPrice": "KWD 600",
+        "timeline": "2+ months",
+        "whatsappMessage": "I want to obtain a Motorcycle License - Category B"
+      },
+      {
+        "id": "construction",
+        "icon": "Tractor",
+        "nameAr": "Construction License",
+        "nameEn": "Construction License",
+        "descriptionAr": "For construction and agricultural vehicles",
+        "descriptionEn": "For construction and agricultural vehicles",
+        "citizenPrice": "KWD 550",
+        "expatPrice": "KWD 800",
+        "timeline": "2+ months",
+        "whatsappMessage": "I want to obtain a construction vehicle license"
+      }
+    ]
+  },
   "accessibility": {"skipToContent": "Skip to main content"},
   "notFoundPage": {"title": "Page Not Found", "description": "Sorry, we could not find the page you requested.", "home": "Return Home"},
   "errorPage": {"title": "Something Went Wrong", "description": "The page could not be loaded. Please try again.", "retry": "Try Again", "home": "Return Home"},

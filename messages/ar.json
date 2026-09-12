@@ -424,6 +424,93 @@
       "whatsappMessage": "استفسار جديد من الموقع\nالاسم: {name}\nالهاتف: {phone}\nالرسالة: {message}"
     }
   },
+  "licenseCategories": {
+    "title": "اختر نوع الرخصة التي تريدها",
+    "subtitle": "كل ما تحتاجه لاستخراج رخصتك — بالأسعار والمدة الزمنية",
+    "citizenLabel": "مواطن",
+    "expatLabel": "مقيم",
+    "priceLabel": "الأسعار",
+    "timelineLabel": "المدة",
+    "whatsappButton": "أرسل رسالة واتساب",
+    "helpText": "هل تحتاج مساعدة في الاختيار؟",
+    "helpButton": "تحدث معنا",
+    "toggleCitizen": "أنا مواطن",
+    "toggleExpat": "أنا مقيم",
+    "categories": [
+      {
+        "id": "private",
+        "icon": "Car",
+        "nameAr": "رخصة سوق خاصة",
+        "nameEn": "Private Driving License",
+        "descriptionAr": "للسيارات الخاصة وحتى 7 ركاب",
+        "descriptionEn": "For private cars up to 7 passengers",
+        "citizenPrice": "٥٠٠ دينار",
+        "expatPrice": "٧٥٠ دينار",
+        "timeline": "٢+ شهر (٨-١٢ أسبوع)",
+        "whatsappMessage": "أريد استخراج رخصة سوق خاصة"
+      },
+      {
+        "id": "general-a",
+        "icon": "Truck",
+        "nameAr": "رخصة سوق عامة - فئة أ",
+        "nameEn": "General License - Category A",
+        "descriptionAr": "للنقل الثقيل والشاحنات الكبيرة",
+        "descriptionEn": "For heavy transport and large trucks",
+        "citizenPrice": "٧٥٠ دينار",
+        "expatPrice": "١,١٠٠ دينار",
+        "timeline": "٣+ أشهر",
+        "whatsappMessage": "أريد استخراج رخصة سوق عامة - فئة أ"
+      },
+      {
+        "id": "general-b",
+        "icon": "Bus",
+        "nameAr": "رخصة سوق عامة - فئة ب",
+        "nameEn": "General License - Category B",
+        "descriptionAr": "للنقل المتوسط (7-25 راكب)",
+        "descriptionEn": "For medium transport (7-25 passengers)",
+        "citizenPrice": "٦٥٠ دينار",
+        "expatPrice": "٩٥٠ دينار",
+        "timeline": "٢-٣ أشهر",
+        "whatsappMessage": "أريد استخراج رخصة سوق عامة - فئة ب"
+      },
+      {
+        "id": "motorcycle-a",
+        "icon": "Bike",
+        "nameAr": "رخصة دراجة آلية - فئة أ",
+        "nameEn": "Motorcycle License - Category A",
+        "descriptionAr": "لجميع الدراجات النارية",
+        "descriptionEn": "For all motorcycles including ATVs",
+        "citizenPrice": "٤٥٠ دينار",
+        "expatPrice": "٦٥٠ دينار",
+        "timeline": "٢+ شهر",
+        "whatsappMessage": "أريد استخراج رخصة دراجة آلية - فئة أ"
+      },
+      {
+        "id": "motorcycle-b",
+        "icon": "Bike",
+        "nameAr": "رخصة دراجة آلية - فئة ب",
+        "nameEn": "Motorcycle License - Category B",
+        "descriptionAr": "للدراجات بثلاث عجلات",
+        "descriptionEn": "For three-wheeled motorcycles",
+        "citizenPrice": "٤٠٠ دينار",
+        "expatPrice": "٦٠٠ دينار",
+        "timeline": "٢+ شهر",
+        "whatsappMessage": "أريد استخراج رخصة دراجة آلية - فئة ب"
+      },
+      {
+        "id": "construction",
+        "icon": "Tractor",
+        "nameAr": "رخصة مركبات أشغال",
+        "nameEn": "Construction License",
+        "descriptionAr": "للآلات الثقيلة والزراعية",
+        "descriptionEn": "For construction and agricultural vehicles",
+        "citizenPrice": "٥٥٠ دينار",
+        "expatPrice": "٨٠٠ دينار",
+        "timeline": "٢+ شهر",
+        "whatsappMessage": "أريد استخراج رخصة مركبات أشغال"
+      }
+    ]
+  },
   "accessibility": {"skipToContent": "انتقل إلى المحتوى الرئيسي"},
   "notFoundPage": {"title": "الصفحة غير موجودة", "description": "عذراً، لم نتمكن من العثور على الصفحة التي طلبتها.", "home": "العودة إلى الرئيسية"},
   "errorPage": {"title": "حدث خطأ", "description": "تعذر تحميل الصفحة. يرجى المحاولة مرة أخرى.", "retry": "حاول مرة أخرى", "home": "العودة إلى الرئيسية"},
