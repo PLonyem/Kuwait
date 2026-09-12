@@ -4,6 +4,7 @@ import {getTranslations, setRequestLocale} from 'next-intl/server';
 
 import ContactForm from '@/components/ContactForm';
 import PageHeader from '@/components/PageHeader';
+import PaymentMethodsRow from '@/components/PaymentMethodsRow';
 import WhatsAppCTA from '@/components/WhatsAppCTA';
 import {createWhatsAppUrl, emailAddress, phoneNumber} from '@/lib/contact';
 import {getPageLocale, type LocalePageProps} from '@/lib/locale';
@@ -37,6 +38,7 @@ export default async function ContactPage({params}: LocalePageProps) {
               <div className="mt-4"><WhatsAppCTA href={whatsappHref} label={t('contactPage.whatsappButton')} ariaLabel={t('whatsapp.ariaLabel')} className="bg-white text-primary" /></div>
               <a href={`tel:${phoneNumber}`} className="mt-5 inline-block rounded-sm font-semibold outline-none hover:underline focus-visible:ring-2 focus-visible:ring-secondary" dir="ltr">{phoneNumber}</a>
             </section>
+            <PaymentMethodsRow variant="default" showLabel className="mt-6" />
             <div className="grid gap-4 sm:grid-cols-2">
               {info.map(({label, value, href, icon: Icon, ltr}) => {
                 const content = <><span className="grid size-10 shrink-0 place-items-center rounded-full bg-primary/10 text-primary"><Icon aria-hidden="true" className="size-5" /></span><span><strong className="block text-primary">{label}</strong><span className="mt-1 block break-words text-sm text-gray-600" dir={ltr ? 'ltr' : undefined}>{value}</span></span></>;

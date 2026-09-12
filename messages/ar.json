@@ -242,6 +242,15 @@
     "ctaMessage": "أريد تأكيد الدفع وبدء عملية استخراج رخصتي",
     "note": "ملاحظة: الرسوم الحكومية (١٠٠–٢٦٦ ديناراً) يدفعها العميل مباشرة للحكومة"
   },
+  "paymentMethods": {
+    "label": "طرق الدفع المدعومة",
+    "supportedLabel": "مدعوم أيضاً",
+    "detailsNote": "التفاصيل عبر واتساب",
+    "fullDetailsNote": "التفاصيل الكاملة عبر واتساب",
+    "applePay": "Apple Pay",
+    "googlePay": "Google Pay",
+    "knet": "KNET"
+  },
   "trustSignals": {
     "title": "لماذا يثق بنا عملاؤنا",
     "subtitle": "أرقام حقيقية، مراجعات موثقة، وفريق حقيقي",

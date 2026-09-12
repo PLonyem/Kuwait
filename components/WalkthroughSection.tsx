@@ -14,6 +14,7 @@ import {
 import {useTranslations} from 'next-intl';
 
 import {createWhatsAppUrl} from '@/lib/contact';
+import PaymentMethodsRow from '@/components/PaymentMethodsRow';
 
 type WalkthroughStep = {
   number: string;
@@ -262,6 +263,12 @@ function CommitmentBlock({
         <MessageCircle aria-hidden="true" className="size-5 shrink-0" />
         {data.ctaButton}
       </a>
+      <div className="my-6 border-t border-white/10" />
+      <PaymentMethodsRow
+        variant="default"
+        showLabel
+        className="mt-6 opacity-70 [&_[data-payment-icon]]:!text-white/60 [&_[data-payment-icon]:hover]:!text-white [&_[data-payment-label]]:!text-white/60 [&_[data-payment-note]]:!text-white/50"
+      />
       <p className="mt-6 text-center text-sm italic text-white/70">{data.note}</p>
     </motion.aside>
   );

@@ -3,6 +3,7 @@ import {useLocale, useTranslations} from 'next-intl';
 
 import {createWhatsAppUrl, emailAddress, phoneNumber, whatsappNumber} from '@/lib/contact';
 import {Link} from '@/navigation';
+import PaymentMethodsRow from '@/components/PaymentMethodsRow';
 
 const quickLinks = [
   {key: 'services', href: '/services'},
@@ -142,9 +143,16 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/15">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-5 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between lg:px-8">
-          <p>{t('footer.copyright')}</p>
-          <p>{t('footer.rightsReserved')}</p>
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-5 text-sm text-white/70 lg:px-8">
+          <div>
+            <p>{t('footer.copyright')}</p>
+            <p className="mt-1 text-xs text-white/50">{t('footer.rightsReserved')}</p>
+          </div>
+          <PaymentMethodsRow
+            variant="compact"
+            showLabel={false}
+            className="shrink-0 opacity-60 transition-opacity duration-200 hover:opacity-100 [&_[data-payment-icon]]:!text-white/60 [&_[data-payment-icon]:hover]:!text-white"
+          />
         </div>
       </div>
     </footer>

@@ -3,6 +3,7 @@ import {Banknote, Building2, Check, CreditCard} from 'lucide-react';
 import {getTranslations, setRequestLocale} from 'next-intl/server';
 
 import PageHeader from '@/components/PageHeader';
+import PaymentMethodsRow from '@/components/PaymentMethodsRow';
 import type {PricingTier} from '@/components/PricingCard';
 import {PricingGroup} from '@/components/PricingTable';
 import WhatsAppCTA from '@/components/WhatsAppCTA';
@@ -48,7 +49,7 @@ export default async function PricingPage({params}: LocalePageProps) {
 
         <section className="mt-16 grid gap-8 lg:grid-cols-[1.3fr_1fr]">
           <div className="rounded-2xl bg-accent/30 p-6 sm:p-8"><h2 className="text-2xl font-bold text-primary">{t('pricingPage.governmentTitle')}</h2><ul className="mt-6 grid gap-3 sm:grid-cols-2">{governmentFees.map((fee) => <li key={fee} className="flex items-start gap-2 text-gray-700"><Check aria-hidden="true" className="mt-1 size-4 shrink-0 text-primary" /><span>{fee}</span></li>)}</ul><p className="mt-6 text-sm font-semibold text-gray-600">{t('pricingPage.governmentNote')}</p></div>
-          <div className="rounded-2xl bg-white p-6 shadow-md sm:p-8"><h2 className="text-2xl font-bold text-primary">{t('pricingPage.paymentTitle')}</h2><ul className="mt-6 space-y-4">{paymentMethods.map((method, index) => {const Icon = paymentIcons[index]; return <li key={method} className="flex items-center gap-3 text-lg text-gray-700"><Icon aria-hidden="true" className="size-6 text-primary" /><span>{method}</span></li>;})}</ul></div>
+          <div className="rounded-2xl bg-white p-6 shadow-md sm:p-8"><h2 className="text-2xl font-bold text-primary">{t('pricingPage.paymentTitle')}</h2><ul className="mt-6 space-y-4">{paymentMethods.map((method, index) => {const Icon = paymentIcons[index]; return <li key={method} className="flex items-center gap-3 text-lg text-gray-700"><Icon aria-hidden="true" className="size-6 text-primary" /><span>{method}</span></li>;})}</ul><PaymentMethodsRow variant="expanded" showLabel className="mt-6 border-t border-gray-100 pt-6" /></div>
         </section>
 
         <div className="mt-16 text-center"><p className="mb-6 text-xl font-bold text-primary">{t('pricingPage.finalCta')}</p><WhatsAppCTA href={whatsappHref} label={t('pricing.cta')} ariaLabel={t('whatsapp.ariaLabel')} /></div>

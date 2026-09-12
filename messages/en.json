@@ -242,6 +242,15 @@
     "ctaMessage": "I want to confirm payment and begin my license application process",
     "note": "Note: Government fees (KWD 100–266) are paid directly by the client to the government"
   },
+  "paymentMethods": {
+    "label": "Supported Payment Methods",
+    "supportedLabel": "Also supported",
+    "detailsNote": "Details via WhatsApp",
+    "fullDetailsNote": "Full details via WhatsApp",
+    "applePay": "Apple Pay",
+    "googlePay": "Google Pay",
+    "knet": "KNET"
+  },
   "trustSignals": {
     "title": "Why Our Clients Trust Us",
     "subtitle": "Real numbers, documented feedback, and a real team",
